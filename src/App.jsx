@@ -3,7 +3,8 @@
 import React from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Hero from "./sections/Hero/Hero";
+import Hero from "./components/HeroSection/Hero";
+
 
 import "./styles/main.scss"
 

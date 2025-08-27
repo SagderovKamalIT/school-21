@@ -1,9 +1,11 @@
+import React from "react";
 import HeroStyles from "./Hero.module.scss";
 import canvasStyles from "./HeroCanvas.module.scss";
+// import { useGLTF } from "@react-three/drei";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef } from "react";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+// import { Canvas, useFrame } from "@react-three/fiber";
+// import { useRef } from "react";
+// import { OrbitControls } from "@react-three/drei";
 
 import { heroesTitle } from "../../data/heroes";
 import { heroesText } from "../../data/heroes";
@@ -14,6 +16,8 @@ import humanHand from "../../assets/images/hero/human-hand.png";
 import textTitle from "../../assets/images/hero/ШКОЛА.png";
 import heroLine from "../../assets/icons/hero-line.svg";
 
+/* 
+// ВРЕМЕННО ОТКЛЮЧЕНО: Куб + сцена
 export function Cube() {
   const { scene } = useGLTF("/models/cube.glb");
   const cubeRef = useRef();
@@ -25,12 +29,12 @@ export function Cube() {
   });
 
   return (
-    <group ref={cubeRef} position={[0, 1.2, -5]}> {/* смещаем куб по Z */}
+    <group ref={cubeRef} position={[0, 1.2, -5]}>
       <primitive object={scene} scale={1} position={[-0.5, -0.5, -0.5]} />
     </group>
   );
 }
-
+*/
 
 function Hero() {
   return (
@@ -49,17 +53,16 @@ function Hero() {
             alt="Заголовок 'ШКОЛА'"
           />
 
+          {/* 
           <div className={canvasStyles.canvasWrapper}>
-  <Canvas  camera={{ position: [0, 1, 10], fov: 50 }} className={canvasStyles.canvas}>
-    {/* Равномерное освещение сцены */}
-    <ambientLight intensity={0.5} />
-    {/* направленный свет */}
-    <directionalLight position={[10, 10, 5]} />
-    <Cube />
-    {/* вращение камерой мышью */}
-    <OrbitControls enableZoom={false} />
-  </Canvas>
-</div>
+            <Canvas camera={{ position: [0, 1, 10], fov: 50 }} className={canvasStyles.canvas}>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[10, 10, 5]} />
+              <Cube />
+              <OrbitControls enableZoom={false} />
+            </Canvas>
+          </div>
+          */}
 
           <div className={HeroStyles.heroText}>
             <h1>
