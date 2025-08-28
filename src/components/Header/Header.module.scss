@@ -2,6 +2,8 @@
 @use "../../styles/core" as *;
 @use "../../styles/mixins" as *;
 
+
+
 .header {
   padding-top: clamp(1rem, 2vw, 2.875rem);
   padding-bottom: clamp(0.5rem, 1vw, 1.469rem);;

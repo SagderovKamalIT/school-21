@@ -6,4 +6,3 @@ export default defineConfig({
   base: '/school-21/',
   plugins: [react()],
 })
-

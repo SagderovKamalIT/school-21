@@ -52,13 +52,10 @@
   flex-direction: column;
   gap: clamp(1.5rem, 1vw , 2.5rem);
 
-  h1 {
- font-weight: 700;
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1.25;
-  text-transform: uppercase;
-  color: $dark-jungle-green;
+  h2 {
+    font-weight: 700;
   }
+
 }
 
 
@@ -94,6 +91,7 @@
       clamp(5rem, 5vw, 10.125rem),
       clamp(2.5rem, 3vw, 4.375rem),
     );
+    font-weight: 700;
     
   }
 

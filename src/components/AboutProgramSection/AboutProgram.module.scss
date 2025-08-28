@@ -1,0 +1,135 @@
+@use "../../styles/variables" as *;
+@use "../../styles/core" as *;
+@use "../../styles/mixins" as *;
+
+.about {
+  padding: 7.5rem 0;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: row;
+  gap: 0.938rem
+
+}
+
+.aboutContentText {
+  background-color: $dark-jungle-green;
+  display: flex;
+  flex-direction: column;
+  gap: 2.813rem;
+  width: clamp(40rem, 49vw , 65.313rem);
+}
+
+.aboutTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  padding-right: clamp(1.5rem, 7vw, 9.5rem)
+
+}
+
+.sectionTitle,
+  .paragraph {
+    color: $white;
+  }
+
+.sectionBlockTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+
+}
+
+.secondBlockTitle::before {
+content: '';
+  position: absolute;
+  background-image: url(../../assets/icons/about-line.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(15rem, 15vw, 30.438rem);
+  height: 38px;
+  left: clamp(-7rem, -20vw, -30.438rem);
+      top: clamp(1.2rem, 10vh, 12.375rem);
+  transform: translateY(-50%);
+
+}
+
+.firstBlockTitle {
+ color: $dark-jungle-green;
+ background-color: $yellowship-green;
+
+}
+
+.secondBlockTitle {
+  color: $white;
+  background-color: $blue-orchid;
+  align-self: flex-end;
+}
+
+.aboutContentSubtitle {
+  font-family: "Roboto-c", sans-serif;
+  font-weight: 400;
+  color: $white;
+  font-size: 1.25rem;
+}
+
+.aboutContentImg {
+  content: '';
+  background-image: url(../../assets/images/aboutProgram//students.png);
+  background-size: cover;
+  width: 40%;
+  border-radius: 1.25rem;
+  
+}
+
+@media (max-width: 1680px) {
+  .about {
+    padding: 5rem 0;
+  }
+
+  .aboutContent {
+    gap: 0.5rem;
+  }
+
+  .aboutContentText {
+    gap: 2rem;
+    width: clamp(30rem, 60vw, 50rem);
+  }
+
+  .aboutTitle {
+    gap: 1rem;
+    padding-right: clamp(1rem, 5vw, 6rem);
+  }
+
+  .sectionBlockTitle {
+    gap: 1.5rem;
+  }
+
+  .secondBlockTitle::before {
+    width: clamp(10rem, 10vw, 20rem);
+    height: 28px;
+    left: clamp(-5rem, -15vw, -20rem);
+    top: clamp(2rem, 9vh, 9rem);
+  }
+
+  .firstBlockTitle {
+    font-size: 1.1rem;
+  }
+
+  .secondBlockTitle {
+    font-size: 1.1rem;
+  }
+
+  .aboutContentSubtitle {
+    font-size: 1rem;
+  }
+
+  .aboutContentImg {
+    width: 50%;
+    border-radius: 1rem;
+  }
+}
+
+

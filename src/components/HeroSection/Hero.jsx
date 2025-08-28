@@ -1,6 +1,10 @@
 import React from "react";
 import HeroStyles from "./Hero.module.scss";
 import canvasStyles from "./HeroCanvas.module.scss";
+import Button from "../Button/Button";
+
+
+
 // import { useGLTF } from "@react-three/drei";
 
 // import { Canvas, useFrame } from "@react-three/fiber";
@@ -15,6 +19,7 @@ import robotHand from "../../assets/images/hero/robot-hand.png";
 import humanHand from "../../assets/images/hero/human-hand.png";
 import textTitle from "../../assets/images/hero/ШКОЛА.png";
 import heroLine from "../../assets/icons/hero-line.svg";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 /* 
 // ВРЕМЕННО ОТКЛЮЧЕНО: Куб + сцена
@@ -65,23 +70,24 @@ function Hero() {
           */}
 
           <div className={HeroStyles.heroText}>
-            <h1>
+
+            <SectionTitle>
               {heroesTitle.lines.map((line, index) => (
                 <span key={index}>
                   {line}
                   {index < heroesTitle.lines.length - 1 && <br />}
                 </span>
               ))}
-            </h1>
+            </SectionTitle>
 
             <div className={HeroStyles.heroApply}>
               <img src={heroLine} alt="Иконка 'стрелка на право'" />
 
               <span>{heroesText.title}</span>
 
-              <button className={HeroStyles.heroApplyBtn}>
-                {heroesBtn.title}
-              </button>
+                <Button className={HeroStyles.heroApplyBtn} text={heroesBtn.title} />
+
+              
             </div>
           </div>
         </div>
