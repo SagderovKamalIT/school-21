@@ -5,9 +5,11 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/HeroSection/Hero";
 import AboutProgram from "./components/AboutProgramSection/AboutProgram";
+import TrainingTasks from "./components/TrainingTasks/TrainingTasks";
 
 
 import "./styles/main.scss"
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
         
       <Hero />
       <AboutProgram />
+      <TrainingTasks />
 
      <Footer />
     </>

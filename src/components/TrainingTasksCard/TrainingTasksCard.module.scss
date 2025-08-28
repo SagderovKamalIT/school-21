@@ -1,0 +1,214 @@
+@use "../../styles/variables" as *;
+@use "../../styles/core" as *;
+@use "../../styles/mixins" as *;
+
+.trainingContent {
+  stroke-width: 0.313rem;
+  border-radius: 1.25rem;
+  stroke: $blue-orchid;
+  padding: 4.063rem 2.313rem 3.5rem 2.313rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+
+
+
+
+.card {
+  position: relative;
+  background-color: $white-smoke;
+  border-radius: 1.25rem;
+  padding: 4.75rem 4.938rem 2.625rem 4.938rem;
+
+  .trainingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+}
+ 
+
+
+   .badge {
+    font-family: "Minecraft-1-1-c", sans-serif;
+    position: absolute;
+    top: 2.3rem;
+    padding: 1.063rem 1.188rem;
+    font-size: 2.25rem;
+    font-weight: 400;
+    border-radius: 0.938rem;
+   }
+
+   .trainingParagraph {
+    padding-right: 10.875rem;
+    font-family: "Roboto", sans-serif;
+   }
+
+   .details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.063rem;
+   }
+
+   .detailGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 1.063rem;
+   }
+
+   .detailText {
+   font-family: "Minecraft-1-1-c", sans-serif;
+   font-size: 1.5rem;
+   font-weight: 400;
+   }
+
+   .highlights {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0.656rem 1.188rem;
+    width: fit-content
+   }
+
+   .skills {
+    max-width: 68.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.938rem;
+   }
+
+   .skill {
+    padding: 0.438rem 1.375rem;
+    border-radius: 4.375rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.625rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 0.063rem solid $dark-jungle-green
+   }
+
+
+
+  &.cardAI {
+
+   .trainingContent {
+    border: 0.313rem solid $blue-orchid;
+   
+  
+   }
+
+   .badge {
+    background-color: $blue-orchid;
+    color: $white;
+    left: 8.375rem;
+   }
+
+     .detailText {
+    color: $blue-orchid;
+   }
+
+   .highlights  {
+    color: $white;
+    background-color: $blue-orchid;
+   }
+
+   .slogan {
+    background-image: url(../../assets//images//trainingTasks//cardAI-background.png);
+    background-size: contein;
+    color: $white;
+   }
+
+   .sloganTitle {
+    background-color: $blue-orchid;
+    color: $white;
+   }
+
+   
+
+}
+
+.trainingContentImg {
+  background-image: url('../../assets/images/trainingTasks/digital.png');
+}
+
+  &.cardDigital {
+
+ 
+
+
+    .trainingContent {
+    border: 0.313rem solid $yellowship-green;
+   }
+
+   
+   .badge {
+    background-color: $yellowship-green;
+    color: $dark-jungle-green;
+    right: 8.375rem;
+   }
+
+   .detailText {
+     color: #00C53B;
+   }
+
+     .highlights  {
+    color: $dark-jungle-green;
+    background-color: $yellowship-green;
+   }
+
+   .slogan {
+    background-image: url(../../assets//images/trainingTasks//cardDigital-backgroud.png);
+    background-size: contein;
+    color: $dark-jungle-green;
+   }
+
+   .sloganTitle {
+    background-color: $yellowship-green;
+    color: $dark-jungle-green;  
+   }
+  }
+
+}
+
+ .sloganBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 2.313rem;
+   }
+
+   .sloganBlockText {
+    display: flex;
+    flex-direction: row;
+    gap: 2.375rem;
+    align-items: center;
+    align-content: center;
+   }
+
+   .slogan {
+    padding: 1.813rem 7rem;
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+   }
+
+   .sloganTitle {
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 1.594rem 1.288rem;
+    border-radius: 0.625rem;
+       white-space: nowrap;
+   }
+
+   .sloganParagraph {
+
+   }
+
+
+
+
+
+

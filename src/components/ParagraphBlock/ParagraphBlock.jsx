@@ -3,7 +3,7 @@ import ParagraphStyles from "./ParagraphBlock.module.scss";
 
 function Paragraph({ className = "", children }) {
   return (
-    <p className={`${ParagraphStyles.ParagraphStyles} ${className}`}>
+    <p className={`${ParagraphStyles.paragraph} ${className}`}>
        {children}
       </p>
   )
