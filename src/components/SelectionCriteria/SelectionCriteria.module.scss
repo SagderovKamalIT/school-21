@@ -1,0 +1,74 @@
+@use "../../styles/variables" as *;
+@use "../../styles/core" as *;
+@use "../../styles/mixins" as *;
+
+.boldText {
+  font-weight: 700; 
+}
+
+.selectionSection {
+  padding: 7.5rem 0;
+}
+
+.selectionContent {
+  padding: 4.375rem 4.375rem ;
+  border-radius: 1.25rem;
+  background-color: $dark-jungle-green;
+  display: flex;
+  flex-direction: column;
+  gap: 3.063rem;
+}
+
+
+.selectionHeader {
+   color: $white;
+  text-align: center;
+}
+
+.selectionList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.813rem;
+  
+}
+
+
+.selectionlistItem {
+  padding: 1.469rem 5.844rem;
+  background-color: $white;
+  color: $dark-jungle-green;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+  
+}
+
+.selectionDayItems  {
+  display: flex;
+  flex-direction: column;
+  gap: 1.313rem;
+  margin: 0 auto;
+}
+
+.dayItem {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  font-weight: 400;
+  font-size: 2.25rem;
+  color: $white;
+  justify-content: center;
+
+}
+
+
+.value {
+  color: $yellowship-green;
+  font-weight: 700;
+}
+
+.divider {
+  width: 100%;
+  height: auto;
+}
+

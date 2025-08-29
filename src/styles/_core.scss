@@ -35,6 +35,7 @@ html {
 .employers-wrap {
   @include min-max(320px, 1920px);
   width: 100%;
+  margin: 0 auto;
   padding: 4.75rem 0;
   box-sizing: border-box;
 }

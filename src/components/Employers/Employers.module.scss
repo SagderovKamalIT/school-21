@@ -2,11 +2,13 @@
 @use "../../styles/core" as *;
 @use "../../styles/mixins" as *;
 
+
 .employersWrap {
   background-color: $dark-jungle-green;
   display: flex;
   flex-direction: column;
   gap: 4.625rem;
+  border-radius: 1.25rem;
 }
 
 .title {

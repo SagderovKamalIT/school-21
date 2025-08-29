@@ -6,6 +6,7 @@ import AboutProgram from "./components/AboutProgramSection/AboutProgram";
 import TrainingTasks from "./components/TrainingTasks/TrainingTasks";
 import JobPrep from "./components/JobPrep/JobPrep"; 
 import Employers from "./components/Employers/Employers";
+import SelectionCriteria from "./components/SelectionCriteria/SelectionCriteria"; 
 
 
 import "./styles/main.scss"
@@ -22,6 +23,7 @@ function App() {
       <TrainingTasks />
       <JobPrep />
       <Employers />
+      <SelectionCriteria />
 
 
      <Footer />
