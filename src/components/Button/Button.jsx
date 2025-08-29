@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function Button(props) {
-    return (
-      <button>{props.text}</button>
-    )
-  }
-
-
+function Button({ text, className, ...props }) {
+  return (
+    <button className={className ? `btn ${className}` : 'btn'} {...props}>
+      {text}
+    </button>
+  );
+}
 
 export default Button;

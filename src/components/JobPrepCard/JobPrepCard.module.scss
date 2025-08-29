@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+@use "../../styles/core" as *;
+@use "../../styles/mixins" as *;
+
+.card {
+padding: 4.875rem 4.938rem;
+  border: 0.188rem solid $dark-jungle-green;
+    border-radius: 1.75rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+
+.cardText {
+  font-weight: 500;
+  font-size: 2.25rem;
+  color: $dark-jungle-green;
+}
+
+.imageWrapper {
+  padding-right: clamp( 2.5rem,10vw,4.9rem);
+}
+
+.cardImage {
+  width: clamp(80%, 90vw, 140%);
+
+}
+
+
+
