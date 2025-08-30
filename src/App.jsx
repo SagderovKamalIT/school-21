@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Hero from "./components/HeroSection/Hero";
 import AboutProgram from "./components/AboutProgramSection/AboutProgram";
 import TrainingTasks from "./components/TrainingTasks/TrainingTasks";
 import JobPrep from "./components/JobPrep/JobPrep"; 
 import Employers from "./components/Employers/Employers";
 import SelectionCriteria from "./components/SelectionCriteria/SelectionCriteria"; 
+import AboutSchool from "./components/AboutSchool/AboutSchool"
+import ContactForm from "./components/ContactForm/ContactForm";
+import Footer from "./components/Footer/Footer";
 
 
 import "./styles/main.scss"
@@ -24,9 +26,12 @@ function App() {
       <JobPrep />
       <Employers />
       <SelectionCriteria />
+      <AboutSchool />
+      <ContactForm />
+      
+      <Footer />
 
 
-     <Footer />
     </>
   );
 }

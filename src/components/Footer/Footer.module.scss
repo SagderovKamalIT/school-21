@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+@use "../../styles/core" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles//fonts" as *;
+
+footer {
+  background-color: $dark-jungle-green;
+}
+
+.footerContainer {
+padding : 0 9.25rem;
+}
+
+.footerContent {
+  padding: 2.625rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLinks,
+.footerSocialLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 4.375rem;
+  align-items: center;
+}
+
+.footerSocialLinks {
+  gap: 2.25rem;
+
+
+}
