@@ -1,15 +1,12 @@
 import React from "react";
 import HeroStyles from "./Hero.module.scss";
-import canvasStyles from "./HeroCanvas.module.scss";
 import Button from "../Button/Button";
 
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { useRef } from "react";
+import { Mesh } from "three";
 
-
-// import { useGLTF } from "@react-three/drei";
-
-// import { Canvas, useFrame } from "@react-three/fiber";
-// import { useRef } from "react";
-// import { OrbitControls } from "@react-three/drei";
 
 import { heroesTitle } from "../../data/heroes";
 import { heroesText } from "../../data/heroes";
@@ -21,25 +18,7 @@ import textTitle from "../../assets/images/hero/ШКОЛА.png";
 import heroLine from "../../assets/icons/hero-line.svg";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
-/* 
-// ВРЕМЕННО ОТКЛЮЧЕНО: Куб + сцена
-export function Cube() {
-  const { scene } = useGLTF("/models/cube.glb");
-  const cubeRef = useRef();
-
-  useFrame(() => {
-    if (cubeRef.current) {
-      cubeRef.current.rotation.y += 0.01; // вращение вокруг Y
-    }
-  });
-
-  return (
-    <group ref={cubeRef} position={[0, 1.2, -5]}>
-      <primitive object={scene} scale={1} position={[-0.5, -0.5, -0.5]} />
-    </group>
-  );
-}
-*/
+import Cube from "../../components/HeroCube/Cube";
 
 function Hero() {
   return (
@@ -58,16 +37,24 @@ function Hero() {
             alt="Заголовок 'ШКОЛА'"
           />
 
-          {/* 
-          <div className={canvasStyles.canvasWrapper}>
-            <Canvas camera={{ position: [0, 1, 10], fov: 50 }} className={canvasStyles.canvas}>
-              <ambientLight intensity={0.5} />
-              <directionalLight position={[10, 10, 5]} />
-              <Cube />
-              <OrbitControls enableZoom={false} />
-            </Canvas>
-          </div>
-          */}
+  <Canvas
+    camera={{ position: [5, 0, 5], fov: 75 }}
+    style={{
+      position: "absolute",  // теперь Canvas привязан к Hero
+      top: 0,
+      left: 0,
+      width: "80%",
+      height: "80%",
+      zIndex: 1,             // выше фона, ниже текста (если надо)
+      pointerEvents: "none",
+    }}
+  >
+    <ambientLight intensity={0.5} />
+    <directionalLight position={[2, 17, 89]} />
+    <Cube />
+    <OrbitControls enableZoom={false} enablePan={false} />
+  </Canvas>
+
 
           <div className={HeroStyles.heroText}>
 

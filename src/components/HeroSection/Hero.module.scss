@@ -8,28 +8,27 @@
 }
 
 .hero::after {
-  content: '';
+  content: "";
   background-image: var(--hand-img);
-  background-size: clamp(700px, 50vh, 1036px); 
+  background-size: clamp(700px, 50vh, 1036px);
   position: absolute;
   background-position: right calc(100% + 5rem);
   background-repeat: no-repeat;
-    z-index: 0;
-     inset: 0;
-      pointer-events: none;
-
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
 }
 
 .hero::before {
-    content: '';
+  content: "";
   background-image: var(--robot-img);
- background-size: clamp(900px, 65vh, 1231px); 
+  background-size: clamp(900px, 65vh, 1231px);
   position: absolute;
-  background-position: left calc(100% + 7rem); 
+  background-position: left calc(100% + 7rem);
   background-repeat: no-repeat;
-    z-index: 0;
-     inset: 0;
-      pointer-events: none;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
 }
 
 .heroContainer {
@@ -37,28 +36,23 @@
   flex-direction: column;
   gap: clamp(10rem, 22vw, 26.688rem);
   margin: 0 auto;
-
 }
 
 .heroContainerImg {
   width: clamp(40rem, 60vw, 78.375rem);
   height: auto;
-  margin: 0 auto
+  margin: 0 auto;
 }
-
 
 .heroText {
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 1vw , 2.5rem);
+  gap: clamp(1.5rem, 1vw, 2.5rem);
 
   h2 {
     font-weight: 700;
   }
-
 }
-
-
 
 .heroApply {
   display: flex;
@@ -81,53 +75,36 @@
   }
 
   button {
-    @include btn (
+    @include btn(
       $yellowship-green,
       $dark-jungle-green,
       clamp(1rem, 2vw, 1.5rem),
-      clamp(0.2rem, 1vw,0.438rem),
+      clamp(0.2rem, 1vw, 0.438rem),
       clamp(5rem, 5vw, 10.125rem),
-      clamp(0.2rem, 1vw,0.438rem),
+      clamp(0.2rem, 1vw, 0.438rem),
       clamp(5rem, 5vw, 10.125rem),
-      clamp(2.5rem, 3vw, 4.375rem),
+      clamp(2.5rem, 3vw, 4.375rem)
     );
     font-weight: 700;
-    
   }
-
 }
 
 @media (max-width: 1680px) {
 
-  .heroContainerImg {
-    width: clamp(30rem, 50vw, 60rem);
-  }
-
   .heroApply {
-   gap: clamp(0.2rem, 0.6vw, 1rem);
+    gap: clamp(0.2rem, 0.6vw, 1rem);
 
     img {
-    width: clamp(3rem, 5vw, 4.5rem);
-  }
+      width: clamp(3rem, 5vw, 4.5rem);
+    }
 
-  span, 
-  button {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  }
+    span,
+    button {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
 
-  button {
-    padding: clamp(0.2rem, 1vw, 0.438rem) clamp(2rem, 3.5vw, 6.125rem) ;
-  }
-
-
+    button {
+      padding: clamp(0.2rem, 1vw, 0.438rem) clamp(2rem, 3.5vw, 6.125rem);
+    }
   }
 }
-
-
-
-
-
-
-
-
-
