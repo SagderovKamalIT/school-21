@@ -40,12 +40,12 @@ function Hero() {
   <Canvas
     camera={{ position: [5, 0, 5], fov: 75 }}
     style={{
-      position: "absolute",  // теперь Canvas привязан к Hero
+      position: "absolute",  
       top: 0,
       left: 0,
       width: "80%",
       height: "80%",
-      zIndex: 1,             // выше фона, ниже текста (если надо)
+      zIndex: 1,             
       pointerEvents: "none",
     }}
   >

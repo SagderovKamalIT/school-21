@@ -9,11 +9,10 @@ export default function Cube(props) {
   const { scene } = useGLTF(cubeModel); 
   const ref = useRef();
 
-  // вращаем модель вокруг своей оси (как красный куб)
   useFrame(() => {
     if (ref.current) {
-      ref.current.rotation.x += 0.01; // вращение по X
-      ref.current.rotation.y += 0.01; // вращение по Y
+      ref.current.rotation.x += 0.01; 
+      ref.current.rotation.y += 0.01; 
     }
   });
 
@@ -22,7 +21,7 @@ export default function Cube(props) {
       ref={ref}
       object={scene}
       scale={1}
-      position={[2, -1, 0]} // оставляем в центре сцены
+      position={[2, -1, 0]} 
       {...props}
     />
   );
