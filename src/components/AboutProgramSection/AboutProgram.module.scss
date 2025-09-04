@@ -9,8 +9,7 @@
 .aboutContent {
   display: flex;
   flex-direction: row;
-  gap: 0.938rem
-
+  gap: 0.938rem;
 }
 
 .aboutContentText {
@@ -18,54 +17,52 @@
   display: flex;
   flex-direction: column;
   gap: 2.813rem;
-  width: clamp(40rem, 49vw , 65.313rem);
+  width: clamp(40rem, 49vw, 65.313rem);
 }
 
 .aboutTitle {
   display: flex;
   flex-direction: column;
   gap: 1.625rem;
-  padding-right: clamp(1.5rem, 7vw, 9.5rem)
-
+  padding-right: clamp(1.5rem, 7vw, 9.5rem);
 }
 
 .sectionTitle,
-  .paragraph {
-    color: $white;
-  }
+.paragraph {
+  color: $white;
+}
 
 .sectionBlockTitle {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  position: relative;
-
 }
 
-.secondBlockTitle::before {
-content: '';
-  position: absolute;
-  background-image: url(../../assets/icons/about-line.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: clamp(15rem, 15vw, 30.438rem);
-  height: 38px;
-  left: clamp(-7rem, -20vw, -30.438rem);
-      top: clamp(1.2rem, 10vh, 12.375rem);
-  transform: translateY(-50%);
-
-}
 
 .firstBlockTitle {
- color: $dark-jungle-green;
- background-color: $yellowship-green;
-
+  color: $dark-jungle-green;
+  background-color: $yellowship-green;
 }
 
 .secondBlockTitle {
   color: $white;
   background-color: $blue-orchid;
   align-self: flex-end;
+    position: relative;
+}
+
+.secondBlockTitle::before {
+  content: "";
+  position: absolute;
+  background-image: url(../../assets/icons/about-line.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(12rem, 18vw , 30.438rem);
+  height: 38px;
+  right: clamp(37rem, 8vw, 40.562rem);
+  bottom: 1rem;
+  background-position: left;
+
 }
 
 .aboutContentSubtitle {
@@ -76,12 +73,11 @@ content: '';
 }
 
 .aboutContentImg {
-  content: '';
+  content: "";
   background-image: url(../../assets/images/aboutProgram//students.png);
   background-size: cover;
   width: 40%;
   border-radius: 1.25rem;
-  
 }
 
 @media (max-width: 1680px) {
@@ -107,13 +103,6 @@ content: '';
     gap: 1.5rem;
   }
 
-  .secondBlockTitle::before {
-    width: clamp(10rem, 10vw, 20rem);
-    height: 28px;
-    left: clamp(-5rem, -15vw, -20rem);
-    top: clamp(2rem, 9vh, 9rem);
-  }
-
   .firstBlockTitle {
     font-size: 1.1rem;
   }
@@ -131,5 +120,3 @@ content: '';
     border-radius: 1rem;
   }
 }
-
-

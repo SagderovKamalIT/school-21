@@ -14,8 +14,6 @@ import aboutLine from "../../assets/icons/about-line.svg";
 
 import { motion } from "framer-motion";
 
-
-
 function AboutProgram() {
   return (
     <section className={AboutProgramStyles.about}>
@@ -29,7 +27,7 @@ function AboutProgram() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                viewport={{ amount: 0.3 }} 
+                viewport={{ amount: 0.3 }}
               >
                 <SectionTitle className={AboutProgramStyles.sectionTitle}>
                   {aboutProgramTitle.title}

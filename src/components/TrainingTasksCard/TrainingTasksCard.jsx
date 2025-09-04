@@ -4,11 +4,15 @@ import TrainingCardStyles from "./TrainingTasksCard.module.scss";
 import BlockTitle from "../BlockTitle/BlockTitle";
 import Paragraph from "../ParagraphBlock/ParagraphBlock";
 import SectionTitle from "../SectionTitle/SectionTitle";
+import Button from "../Button/Button";
 
 import { trainingTasksData } from "../../data/trainingTasks";
 
+import arrowLeft from "../../assets/images/trainingTasks/arrow-left.svg";
+import arrowRight from "../../assets/images/trainingTasks/arrow-right.svg";
 
-function TrainingTasksCard({ id, title, paragraphs, details, highlights, skills , slogan, sloganTitle, sloganParagraph}) {
+
+function TrainingTasksCard({ id, title, paragraphs, details, highlights, skills , slogan, sloganTitle, sloganParagraph, sloganButton}) {
   const cardClass =
     id === "ai-engineer" ? TrainingCardStyles.cardAI :
     id === "digital-managers" ? TrainingCardStyles.cardDigital :
@@ -66,8 +70,31 @@ function TrainingTasksCard({ id, title, paragraphs, details, highlights, skills 
         <h4 className={TrainingCardStyles.sloganTitle}>{sloganTitle}</h4>
         <Paragraph className={TrainingCardStyles.sloganParagraph}>{sloganParagraph}</Paragraph>
           </div>
+
       </div>
-        </div>
+
+      
+      
+
+          <div className={TrainingCardStyles.buttonContainer} >
+
+            <img  className={TrainingCardStyles.buttonContainerArrow} src={arrowLeft} alt="arrowLeft" />
+
+            <Button className={TrainingCardStyles.sloganButton} text={sloganButton} >
+ 
+
+             
+             
+            </Button>
+
+             <img  className={TrainingCardStyles.buttonContainerArrow} src={arrowRight} alt="arrowRight" />
+
+
+   </div>
+     </div>
+   
+     
+
       
 
     </article>

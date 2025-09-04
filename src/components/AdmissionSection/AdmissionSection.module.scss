@@ -1,0 +1,150 @@
+@use "../../styles/variables" as *;
+@use "../../styles/core" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles//fonts" as *;
+
+.admission {
+  padding-top: 10rem;
+}
+
+.admissionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6.438rem;
+
+
+}
+
+.admissionContainer {
+  display: flex; 
+  flex-direction: column;
+  row-gap: 6.25rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row1 {
+      column-gap: clamp(10rem, 25vw, 35rem);
+      position: relative;
+}
+
+.row1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: clamp(10rem, 32vw, 33rem);
+  background-image: url(../../assets//images//admission//vector-row1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(10rem, 25vw, 35rem);
+  height: 100%;
+  background-position: center;
+  z-index: -1;
+
+}
+
+.row1::before {
+  content: '';
+  position: absolute;
+  bottom: -8vh;
+  right: 5vw;
+  background-image: url(../../assets//images//admission/vector-row1-to-2png.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(5rem, 25vw, 10.313rem);
+  height: 100%;
+  background-position: right;
+  z-index: -1;
+
+}
+
+.row2 {
+  justify-content: space-between;
+  position: relative;
+}
+
+.row2::after {
+   content: '';
+  position: absolute;
+  top: 0;
+  right: clamp(10rem, 20vw, 33rem);
+  background-image: url(../../assets//images//admission//vector-row2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+      width: clamp(12rem, 24vw, 26rem);
+  height: clamp(5rem, 20vh,12.5rem);
+  background-position: center;
+  z-index: -1;
+
+}
+
+.row3 {
+      gap: clamp(15rem, 29vw, 39.563rem);
+      position: relative;
+}
+
+.row3::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url(../../assets//images//admission//flag.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+
+
+.admissionContainerCard {
+display: flex;
+flex-direction: column;
+gap: 1.625rem;
+ border-radius: 0.938rem;
+  padding: 1.688rem 2.25rem;
+  background-color: $yellowship-green;
+  color: $dark-jungle-green;
+  width: fit-content;
+
+  h3 {
+    font-family: 'Minecraft-1-1-c', sans-serif;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-family: "Roboto-c", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $black;
+  }
+
+}
+
+ .extraText {
+    font-family: "Roboto-c", sans-serif;
+    font-size: 1.25rem !important;
+
+  }
+
+.card2 {
+  width: 30vw;
+
+}
+
+.card3 {
+  width: 50vw;
+}
+
+.card4 {
+  width: 22vw;
+}
+
+
+
+
+
+

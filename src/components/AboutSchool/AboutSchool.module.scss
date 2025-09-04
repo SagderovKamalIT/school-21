@@ -16,9 +16,10 @@
 .aboutContent {
   display: flex;
   flex-direction: row;
+  width: calc(50 / 2);
 }
 
-.aboutContentLeft  {
+.aboutContentLeft {
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
@@ -31,15 +32,14 @@
 
   li {
     font-weight: 500;
-     font-size: clamp(1rem, 1vw + 0.8rem, 1.5rem); 
-    padding: clamp(0.3rem, 0.5vw + 0.2rem, 0.438rem) 
-    clamp(0.8rem, 1vw + 0.5rem, 1.375rem); 
+    font-size: clamp(1rem, 1vw + 0.8rem, 1.5rem);
+    padding: clamp(0.3rem, 0.5vw + 0.2rem, 0.438rem)
+      clamp(0.8rem, 1vw + 0.5rem, 1.375rem);
     text-transform: uppercase;
     color: $dark-jungle-green;
     border-radius: 6.25rem;
     border: 0.063rem solid $dark-jungle-green;
     width: fit-content;
-
   }
 }
 
@@ -48,7 +48,6 @@
   flex-direction: column;
   gap: 0.75rem;
   flex-wrap: wrap;
-
 }
 
 .aboutContentList1 {
@@ -69,7 +68,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
-
 }
 
 .aboutContentAddress p {
@@ -80,7 +78,6 @@
 
 .aboutContentImage img {
   width: clamp(30rem, 49vw, 46.813rem);
-  
 }
 
 .aboutContentRight {
@@ -89,28 +86,40 @@
   gap: 3.113rem;
 }
 
-.aboutImageCoworking  {
-  margin-left: clamp(2rem, 10vw,  4.813rem);
-  height: clamp( 20rem, 40vh ,31.188rem);
-  width:  clamp(21rem, 45vw, 49.813rem); 
-  background-image: url('../../assets/images/aboutSchool/coworking.png'); 
-  background-size: cover;       
-  background-position: center;  
+.aboutImageCoworking {
+
+  margin-left: clamp(2rem, 10vw, 4.813rem);
+  height: clamp(20rem, 40vh, 31.188rem);
+  width: clamp(21rem, 45vw, 49.813rem);
+  background-image: url("../../assets/images/aboutSchool/coworking.png");
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0.938rem;
   box-sizing: border-box;
 }
 
+.aboutImageHall {
+  //   content: '';
+  // position: absolute;
+  
 
 
-.aboutImageHall  {
-  width: clamp(30rem, 46vw , 51.625rem);
-  margin-left: 4.438rem;
-  height: clamp(15rem, 10vh, 22.063rem)
+  // background-image: url(../../assets//images//aboutSchool//lecture-hall.png);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // box-sizing: border-box;
+  // width: clamp(20rem, 40vw, 51.625rem);
+  // height: clamp(10rem, 20vh, 22.063rem);
+  // background-position: bottom 0 right 0;
+
+
 
   img {
-     width: 100%;
-    height: auto;
+  width: clamp(30rem, 48vw, 61rem);
+  height: clamp(15rem, 28vh, 22.063rem)  
   }
 }
 
+@media (max-width: 1680px) {
+
+}

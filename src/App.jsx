@@ -9,9 +9,11 @@ import SelectionCriteria from "./components/SelectionCriteria/SelectionCriteria"
 import AboutSchool from "./components/AboutSchool/AboutSchool"
 import ContactForm from "./components/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
+import Admission from "./components/AdmissionSection/AdmissinSection";
 
 
 import "./styles/main.scss"
+
 
 
 
@@ -25,10 +27,12 @@ function App() {
       <TrainingTasks />
       <JobPrep />
       <Employers />
+      <Admission />
       <SelectionCriteria />
       <AboutSchool />
       <ContactForm />
       
+
       <Footer />
 
 

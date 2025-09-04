@@ -9,6 +9,9 @@ import { trainingTasksData } from "../../data/trainingTasks";
 
 
 
+
+
+
 function TrainingTasks() {
   return (
     <section className={TrainingStyles.trainingTasks}>
@@ -32,6 +35,7 @@ function TrainingTasks() {
               slogan={card.slogan}
               sloganTitle={card.sloganTitle}
               sloganParagraph={card.sloganParagraph}
+              sloganButton={card.sloganButton}
             />
           ))}
 

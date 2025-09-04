@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: clamp(1.5rem, 4vw, 4.375rem);
+  gap: clamp(1rem, 4vw, 2.125rem);
 }
 
 .headerLinkSber img {
@@ -32,6 +32,11 @@
 
 .headerLinkRudn img {
   width: clamp(90px, 10vw, 154px);
+  height: auto;
+}
+
+.imageX {
+  width: 1.688rem;
   height: auto;
 }
 

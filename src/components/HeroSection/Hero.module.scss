@@ -17,6 +17,7 @@
   z-index: 0;
   inset: 0;
   pointer-events: none;
+  
 }
 
 .hero::before {
@@ -29,19 +30,40 @@
   z-index: 0;
   inset: 0;
   pointer-events: none;
+  z-index: 1;
 }
 
 .heroContainer {
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: clamp(10rem, 22vw, 26.688rem);
   margin: 0 auto;
 }
+
+// .heroContainer:before {
+//    content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: clamp(600px, 30vw, 1035px); // задаём размер
+//   height: clamp(300px, 30vw, 582px);
+//   background-image: url(../../assets/images/hero/3d-cube.png);
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   transform: translate(-50%, -50%); // центрируем по центру
+//   z-index: 0;
+//   pointer-events: none;
+
+// }
 
 .heroContainerImg {
   width: clamp(40rem, 60vw, 78.375rem);
   height: auto;
   margin: 0 auto;
+    position: relative;
+  z-index: -1;
 }
 
 .heroText {

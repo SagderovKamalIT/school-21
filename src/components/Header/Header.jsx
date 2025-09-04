@@ -4,6 +4,7 @@ import { headerItems } from "../../data/header";
 
 import schoolLogo from "../../assets/images/header/school21_logo.svg";
 import rudnLogo from "../../assets/images/header/rudn_logo.svg";
+import x from "../../assets/images/header/x.svg";
 
 function Header() {
   return (
@@ -14,9 +15,15 @@ function Header() {
             <a className={styles.headerLinkSber} href="/">
               <img src={schoolLogo} alt="Логотип 'ШКОЛА_21'" />
             </a>
+
+            <a className={styles.imageX} href="">
+              <img  src={x} alt="x" />
+            </a>
             <a className={styles.headerLinkRudn} href="/">
               <img src={rudnLogo} alt="Логотип 'РУДН'" />
             </a>
+
+            
           </div>
 
           <nav className={styles.nav}>

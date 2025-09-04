@@ -2,10 +2,12 @@ import React from "react";
 import HeroStyles from "./Hero.module.scss";
 import Button from "../Button/Button";
 
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { useRef } from "react";
-import { Mesh } from "three";
+// import { Canvas } from "@react-three/fiber";
+// import { OrbitControls } from "@react-three/drei";
+// import { useRef } from "react";
+// import { Mesh } from "three";
+
+import LottieExample from "../../components/HeroCube/Cube";
 
 
 import { heroesTitle } from "../../data/heroes";
@@ -18,7 +20,7 @@ import textTitle from "../../assets/images/hero/ШКОЛА.png";
 import heroLine from "../../assets/icons/hero-line.svg";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
-import Cube from "../../components/HeroCube/Cube";
+
 
 function Hero() {
   return (
@@ -37,7 +39,11 @@ function Hero() {
             alt="Заголовок 'ШКОЛА'"
           />
 
-  <Canvas
+          <LottieExample />
+        
+  {/* Тут 3d куб  */}
+
+  {/* <Canvas
     camera={{ position: [5, 0, 5], fov: 75 }}
     style={{
       position: "absolute",  
@@ -53,7 +59,7 @@ function Hero() {
     <directionalLight position={[2, 17, 89]} />
     <Cube />
     <OrbitControls enableZoom={false} enablePan={false} />
-  </Canvas>
+  </Canvas> */}
 
 
           <div className={HeroStyles.heroText}>
@@ -66,6 +72,9 @@ function Hero() {
                 </span>
               ))}
             </SectionTitle>
+
+  
+     
 
             <div className={HeroStyles.heroApply}>
               <img src={heroLine} alt="Иконка 'стрелка на право'" />

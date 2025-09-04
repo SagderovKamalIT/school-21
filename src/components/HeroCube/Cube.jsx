@@ -1,28 +1,35 @@
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import React, { useEffect, useRef } from 'react';
+import lottie from 'lottie-web';
+import animationData from '../../assets/models/cube-animation.json';
 
-// если модель в public/models — подключаем так:
-import cubeModel from "../../assets/models/cube.glb";
+export default function LottieExample() {
+  const container = useRef(null);
 
-export default function Cube(props) {
-  const { scene } = useGLTF(cubeModel); 
-  const ref = useRef();
+  useEffect(() => {
+    const anim = lottie.loadAnimation({
+      container: container.current,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+    });
 
-  useFrame(() => {
-    if (ref.current) {
-      ref.current.rotation.x += 0.01; 
-      ref.current.rotation.y += 0.01; 
-    }
-  });
+    return () => anim.destroy(); // очистка при размонтировании
+  }, []);
 
   return (
-    <primitive
-      ref={ref}
-      object={scene}
-      scale={1}
-      position={[2, -1, 0]} 
-      {...props}
-    />
+    <div
+      ref={container}
+      style={{
+        width: "clamp(600px, 49vw, 1035px)",
+        height: "clamp(300px, 30vw, 582px)",
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        zIndex: 9999,
+        pointerEvents: 'none',
+      }}
+    ></div>
   );
 }
