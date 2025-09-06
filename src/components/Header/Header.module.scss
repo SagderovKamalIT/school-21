@@ -2,12 +2,9 @@
 @use "../../styles/core" as *;
 @use "../../styles/mixins" as *;
 
-
-
 .header {
-  padding-top: clamp(1rem, 2vw, 2.875rem);
-  padding-bottom: clamp(0.5rem, 1vw, 1.469rem);;
-
+  padding-top: 2.85rem;
+  padding-bottom: 1.469rem;
 }
 
 .headerContainer {
@@ -41,7 +38,8 @@
 }
 
 .nav {
- padding: clamp(6.5px, 0.5vw, 8.5px) clamp(12px, 1vw, 14px) clamp(6.5px, 0.5vw, 8.5px) clamp(30px, 3vw, 50px);
+  padding: clamp(6.5px, 0.5vw, 8.5px) clamp(12px, 1vw, 14px)
+    clamp(6.5px, 0.5vw, 8.5px) clamp(30px, 3vw, 50px);
   border-radius: clamp(2rem, 2vw, 3.188rem);
   background-color: $dark-jungle-green;
 }
@@ -73,15 +71,15 @@
     1.375rem,
     0.438rem,
     1.375rem,
-    4.375rem,
+    4.375rem
   );
   font-size: clamp(0.9rem, 1.5vw, 1.25rem);
 }
 
 @media (max-width: 1680px) {
-.header {
-    padding-top: clamp(1rem, 2vw, 2.5rem);
-    padding-bottom: clamp(0.5rem, 1vw, 1.25rem);
+  .header {
+    padding-top: 2.5rem;
+    padding-bottom: 1.25rem;
   }
 
   .headerLink {
@@ -97,13 +95,14 @@
   }
 
   .nav {
-    padding: clamp(5px, 0.5vw, 7px) clamp(10px, 1vw, 12px) clamp(5px, 0.5vw, 7px) clamp(25px, 3vw, 40px);
+    padding: clamp(5px, 0.5vw, 7px) clamp(10px, 1vw, 12px)
+      clamp(5px, 0.5vw, 7px) clamp(25px, 3vw, 40px);
     border-radius: clamp(1.5rem, 1.5vw, 2.5rem);
   }
 
-    .navItem a {
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
-}
+  .navItem a {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
 
   .navList {
     gap: clamp(1.5rem, 3vw, 3.5rem);
@@ -115,7 +114,7 @@
 }
 
 @media (max-width: 1280px) {
-.header {
+  .header {
     padding-top: clamp(0.9rem, 1.5vw, 2.2rem);
     padding-bottom: clamp(0.5rem, 0.8vw, 1.1rem);
   }
@@ -125,7 +124,8 @@
   }
 
   .nav {
-    padding: clamp(5px, 0.4vw, 6px) clamp(8px, 0.8vw, 12px) clamp(5px, 0.4vw, 6px) clamp(20px, 2.5vw, 35px);
+    padding: clamp(5px, 0.4vw, 6px) clamp(8px, 0.8vw, 12px)
+      clamp(5px, 0.4vw, 6px) clamp(20px, 2.5vw, 35px);
     border-radius: clamp(1.2rem, 1.2vw, 2rem);
   }
 
@@ -133,7 +133,9 @@
     gap: clamp(1rem, 2.5vw, 3rem);
   }
 
-
+  .imageX {
+  width: 1.2rem;
+}
 
   .navButton {
     font-size: clamp(0.9rem, 1vw, 1.25rem);
@@ -141,36 +143,71 @@
   }
 }
 
-// @media (max-width: 1064px) {
-//   .header {
-//     padding-top: clamp(0.8rem, 1.2vw, 1.8rem);
-//     padding-bottom: clamp(0.4rem, 0.6vw, 1rem);
-//   }
+@media (max-width: 1024px) {
+  .header {
+    padding-top: 1.875rem;
+    padding-bottom: 0;
+  }
 
-//   .headerLink {
-//     gap: clamp(0.5rem, 2vw, 2.5rem);
-//   }
+  .headerLink {
+    gap: clamp(0.4rem, 2vw, 0.813rem);
+  }
 
-//   .headerLinkSber img {
-//     width: clamp(22px, 4vw, 50px);
-//   }
+  .headerLinkSber img {
+    width: clamp(20px, 4vw, 32px);
+    height: auto;
+  }
 
-//   .headerLinkRudn img {
-//     width: clamp(60px, 6vw, 100px);
-//   }
+  .headerLinkRudn img {
+    width: clamp(60px, 10vw, 87px);
+    height: auto;
+  }
 
-//   .nav {
-//     padding: clamp(4px, 0.4vw, 5px) clamp(6px, 0.6vw, 10px) clamp(4px, 0.4vw, 5px) clamp(15px, 2vw, 25px);
-//     border-radius: clamp(1rem, 1vw, 1.8rem);
-//   }
+  .imageX {
+    width: clamp(0.6rem, 2vw, 1rem);
+    height: auto;
+  }
 
-//   .navList {
-//     gap: clamp(0.8rem, 2vw, 2.5rem);
-//   }
+  .nav {
+    padding: clamp(3px, 0.5vh, 5.5px) clamp(9px, 1vw, 14px)
+      clamp(3px, 0.5vh, 5.5px) clamp(3.5px, 1vw, 6px);
+    border-radius: clamp(1.5rem, 1.5vw, 2.5rem);
+  }
 
-//   .navButton {
-//     font-size: clamp(0.8rem, 0.9vw, 1.1rem);
-//     padding: clamp(0.25rem, 0.4vw, 0.6rem) clamp(0.4rem, 0.8vw, 1rem);
-//   }
+  .navList {
+    gap: clamp(2rem, 3.5vw, 3.94rem);
+    align-items: center;
+  }
 
-// }
+  .navItem a {
+    font-size: clamp(0.5rem, 1.5vw, 0.75rem);
+  }
+
+  .navButton {
+    @include btn(
+      $white,
+      $black,
+      clamp(0.5rem, 1.5vw, 0.75rem),
+      0.313rem,
+      0.75rem,
+      0.313rem,
+      0.75rem,
+      4.375rem
+    );
+  }
+}
+
+@media (max-width: 824px) {
+
+
+  .navList {
+    gap: clamp(1.5rem, 2.5vw, 3.94rem);
+    align-items: center;
+  }
+
+  .navItem a {
+    font-size: clamp(0.5rem, 1.5vw, 0.75rem);
+  }
+
+
+}

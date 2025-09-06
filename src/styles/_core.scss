@@ -10,6 +10,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  font-size: 100%;
 }
 
 
@@ -69,8 +70,24 @@ button {
   font-family: inherit;
 }
 
-@media (max-width: 1064px) {
+@media (max-width: 1460px) {
+
+  html {
+    font-size: 90%;
+  }
+
+}
+
+@media (max-width: 1024px) {
   .wrap {
-  padding: 0 5.708vw;
+  padding: 0 5.270vw;
 }
+
 }
+
+@media (max-width: 824px) {
+  .wrap {
+      padding: 0 4vw;
+  }
+}
+

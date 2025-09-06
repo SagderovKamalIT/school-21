@@ -17,7 +17,7 @@ function Header() {
             </a>
 
             <a className={styles.imageX} href="">
-              <img  src={x} alt="x" />
+              <img className={styles.imageX} src={x} alt="x" />
             </a>
             <a className={styles.headerLinkRudn} href="/">
               <img src={rudnLogo} alt="Логотип 'РУДН'" />
