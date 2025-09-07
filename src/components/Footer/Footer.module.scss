@@ -31,3 +31,73 @@ padding : 0 9.25rem;
 
 
 }
+
+@media (max-width: 1024px) {
+
+  .footerContainer {
+padding : 0  2.813rem;
+}
+
+.footerContent {
+  padding: 1.5rem 0;
+}
+
+
+.footerLinks{
+  gap: 1.188rem;
+
+  img {
+    height: 34px;
+    width: auto;
+  }
+}
+
+
+.footerSocialLinks {
+  gap: 1.188rem;
+
+  img {
+    width: 32px;
+    height: auto;
+  }
+
+
+}
+
+
+
+}
+
+@media (max-width: 490px) {
+
+    .footerContainer {
+padding : 0  3.75rem;
+}
+
+.footerContent {
+  padding: 1.063rem 0;
+}
+
+
+.footerLinks{
+  gap: 0.875rem;
+
+  img {
+    height: 26px;
+    width: auto;
+  }
+}
+
+
+.footerSocialLinks {
+  gap: 0.978rem;
+
+  img {
+    width: 27px;
+    height: auto;
+  }
+
+
+}
+
+}
