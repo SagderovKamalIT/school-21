@@ -1,48 +1,86 @@
 import React from "react";
+import { motion } from "framer-motion";
 import admissionStyles from "./AdmissionSection.module.scss";
-import { section } from "framer-motion/client";
 import { admissionData } from "../../data/admission";
 
 import Title from "../SectionTitle/SectionTitle";
 
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2, 
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 function Admission() {
-   const rows = [];
+  const rows = [];
   for (let i = 0; i < admissionData.length; i += 2) {
     rows.push(admissionData.slice(i, i + 2));
   }
 
   return (
-    <section className={admissionStyles.admission}>
+    <motion.section
+      id="apply"
+      className={admissionStyles.admission}
+      initial="hidden"
+      whileInView="show" 
+      viewport={{ once: false, amount: 0.2 }} 
+    >
       <div className="block-wrap">
         <div className={admissionStyles.admissionContent}>
           <Title>// Как поступить:</Title>
 
-       <div className={admissionStyles.admissionContainer}>
-  {rows.map((row, rowIndex) => (
-    <ul
-      key={rowIndex}
-      className={`${admissionStyles.row} ${admissionStyles[`row${rowIndex + 1}`]}`}
-    >
-      {row.map((item) => (
-        <li
-          key={item.id}
-          className={`${admissionStyles.admissionContainerCard} ${
-            item.className ? admissionStyles[item.className] : ""
-          }`}
-        >
-          <h3>{item.title}</h3>
-          <p>{item.text}</p>
-          {item.extraText && (
-            <p className={admissionStyles.extraText}>{item.extraText}</p>
-          )}
-        </li>
-      ))}
-    </ul>
-  ))}
-</div>
+          <motion.div
+            className={admissionStyles.admissionContainer}
+            variants={containerVariants}
+          >
+            {rows.map((row, rowIndex) => (
+              <motion.ul
+                key={rowIndex}
+                className={`${admissionStyles.row} ${
+                  admissionStyles[`row${rowIndex + 1}`]
+                }`}
+                variants={containerVariants}
+              >
+                {row.map((item, itemIndex) => (
+                  <motion.li
+                    key={item.id}
+                    className={`
+                      ${admissionStyles.admissionContainerCard} 
+                      ${item.className ? admissionStyles[item.className] : ""} 
+                      ${admissionStyles[`card-${rowIndex + 1}-${itemIndex + 1}`]}
+                    `}
+                    variants={cardVariants}
+                    whileHover={{
+                      scale: 1.05, 
+                      boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.2)",
+                      transition: { duration: 0.3 },
+                    }}
+                    whileTap={{ scale: 0.98 }} 
+                  >
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                    {item.extraText && (
+                      <p className={admissionStyles.extraText}>
+                        {item.extraText}
+                      </p>
+                    )}
+                  </motion.li>
+                ))}
+              </motion.ul>
+            ))}
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -10,7 +10,7 @@ import LectureHall from "../../assets/images/aboutSchool/lecture-hall.png";
 
 function AboutSchool() {
   return (
-    <section>
+    <section  id="campus">
       <div className="block-wrap">
         <div className={AboutSchoolStyles.aboutContainer}>
           <Heading className={AboutSchoolStyles.aboutContainerHeader}>

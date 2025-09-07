@@ -19,76 +19,52 @@
   row-gap: 6.25rem;
 }
 
+
 .row {
   display: flex;
   flex-direction: row;
 }
 
+
+
 .row1 {
   column-gap: clamp(10rem, 25vw, 35rem);
-  position: relative;
+   position: relative;
 }
 
-.row1::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: clamp(10rem, 32vw, 33rem);
-  background-image: url(../../assets//images//admission//vector-row1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: clamp(10rem, 25vw, 35rem);
-  height: 100%;
-  background-position: center;
-  z-index: -1;
-}
 
-.row1::before {
-  content: "";
-  position: absolute;
-  bottom: -8vh;
-  right: 5vw;
-  background-image: url(../../assets//images//admission/vector-row1-to-2png.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: clamp(5rem, 25vw, 10.313rem);
-  height: 100%;
-  background-position: right;
-  z-index: -1;
-}
 
 .row2 {
-  justify-content: space-between;
   position: relative;
+  justify-content: space-between;
 }
 
-.row2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: clamp(10rem, 20vw, 33rem);
-  background-image: url(../../assets//images//admission//vector-row2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: clamp(12rem, 24vw, 26rem);
-  height: clamp(5rem, 20vh, 12.5rem);
-  background-position: center;
-  z-index: -1;
-}
 
 .row3 {
   gap: clamp(15rem, 29vw, 39.563rem);
   position: relative;
+  
 }
 
-.row3::after {
-  content: "";
+.card-3-2 {
+  position: relative;
+}
+
+
+
+
+.card-3-2::after {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  background-image: url(../../assets//images//admission//flag.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+    content: '';
+  background-image: url(../../assets/images//admission//flag.png);
+   background-size: cover;
+  width: 7.438rem;
+  height: 8.5rem;
+  right: 2vw;
+  bottom: 9vh;
+   transform: rotate(15deg);
+   transform-origin: center;
+
 }
 
 .admissionContainerCard {
@@ -158,48 +134,9 @@
   position: relative;
 }
 
-.row1::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: clamp(10rem, 32vw, 33rem);
-  background-image: url(../../assets//images//admission//vector-row1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: clamp(10rem, 25vw, 35rem);
-  height: 100%;
-  background-position: center;
-  z-index: -1;
-}
-
-.row1::before {
-  content: "";
-  position: absolute;
-  bottom: -8vh;
-  right: 5vw;
-  background-image: url(../../assets//images//admission/vector-row1-to-2png.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: clamp(5rem, 25vw, 10.313rem);
-  height: 100%;
-  background-position: right;
-  z-index: -1;
-}
 
 
-.row2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: clamp(10rem, 20vw, 33rem);
-  background-image: url(../../assets//images//admission//vector-row2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: clamp(12rem, 24vw, 26rem);
-  height: clamp(5rem, 20vh, 12.5rem);
-  background-position: center;
-  z-index: -1;
-}
+
 
 .row3 {
   gap: clamp(15rem, 29vw, 39.563rem);
@@ -294,6 +231,10 @@
 .row1::before,
 .row1::after,
 .row2::after {
+  display: none;
+}
+
+.card-3-2::after  {
   display: none;
 }
 

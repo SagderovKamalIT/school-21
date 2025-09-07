@@ -21,7 +21,7 @@ function Footer() {
   return (
     <footer >
 
-      <div className={FooterStyles.footerContainer
+      <div id="contacts" className={FooterStyles.footerContainer
       } >
 
         <div className={FooterStyles.footerContent} >

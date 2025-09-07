@@ -14,7 +14,7 @@ import { trainingTasksData } from "../../data/trainingTasks";
 
 function TrainingTasks() {
   return (
-    <section className={TrainingStyles.trainingTasks}>
+    <section id="tracks" className={TrainingStyles.trainingTasks}>
       <div className={`block-wrap ${TrainingStyles.trainingBlock}`} >
 
         <Heading className={TrainingStyles.trainingTasksHeader}>

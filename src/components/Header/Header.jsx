@@ -14,14 +14,16 @@ function Header() {
       <div className="wrap">
         <div className={styles.headerContainer}>
           <div className={styles.headerLink}>
-            <a className={styles.headerLinkSber} href="/">
+            <a className={styles.headerLinkSber} href="https://21-school.ru/" target="_blank"
+              rel="noopener noreferrer">
               <img src={schoolLogo} alt="Логотип 'ШКОЛА_21'" />
             </a>
 
             <a className={styles.imageX} href="">
               <img className={styles.imageX} src={x} alt="x" />
             </a>
-            <a className={styles.headerLinkRudn} href="/">
+            <a className={styles.headerLinkRudn} href="https://www.rudn.ru/" target="_blank"
+              rel="noopener noreferrer">
               <img src={rudnLogo} alt="Логотип 'РУДН'" />
             </a>
 

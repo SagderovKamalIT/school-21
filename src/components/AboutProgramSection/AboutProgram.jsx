@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 
 function AboutProgram() {
   return (
-    <section className={AboutProgramStyles.about}>
+    <section id="about" className={AboutProgramStyles.about}>
       <div className="block-wrap">
         <div className={AboutProgramStyles.aboutContent}>
           <div

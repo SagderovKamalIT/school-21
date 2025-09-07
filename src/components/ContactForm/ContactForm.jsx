@@ -6,7 +6,7 @@ import { contactFormData } from "../../data/contactForm";
 
 function ContactForm() {
   return (
-    <section className={ContactFormStyles.contactSection}>
+    <section id="faq" className={ContactFormStyles.contactSection}>
       <div className="block-wrap">
         <div className={ContactFormStyles.contactContainer}>
           <div className={ContactFormStyles.contactContent} >
