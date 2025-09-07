@@ -30,6 +30,10 @@
   gap: 2rem;
 }
 
+.aboutContentRight  {
+  margin-top: 10vh;
+}
+
 .aboutContentInfo {
   display: flex;
   flex-direction: column;
@@ -56,6 +60,7 @@
 .aboutContentList1 {
   display: flex;
   gap: clamp(0.5rem, 2vw, 1.25rem);
+    flex-wrap: wrap;
 }
 
 .aboutContentList3 {
@@ -107,12 +112,98 @@
 
 
 @media (max-width: 1024px) {
+   
+
+  .aboutContainer {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+
   .aboutContent {
     flex-direction: column;
+    gap: 3rem;
+    max-width: 1024px;
+    margin: 0 auto;  
   }
 
   .aboutContentLeft,
   .aboutContentRight {
+    flex: 1 1 100%;
     max-width: 100%;
   }
+
+  .aboutContentRight {
+    margin-top: 0;
+  }
+
+  .aboutImageHall img,
+  .aboutImageCoworking {
+    
+    background-size: contain;
+  }
+
+  .aboutContentInfo li {
+    font-size: clamp(0.875rem, 1vw + 0.6rem, 1.25rem);
+    padding: 0.4rem 1rem;
+    margin: 0 auto;
+  }
 }
+
+@media (max-width: 490px) {
+
+  .aboutContainer {
+    gap: 1.5rem;
+  }
+
+  .aboutContent {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .aboutContentLeft,
+  .aboutContentRight {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .aboutContentRight {
+    margin-top: 1rem;
+  }
+
+  .aboutImageHall img,
+  .aboutImageCoworking {
+    width: 100%;
+    height: auto;
+    background-size: cover; 
+  }
+
+  .aboutContentInfo {
+    gap: 1.125rem;
+  }
+
+  .aboutContentList1 {
+   flex-wrap: wrap;
+  }
+
+  .aboutContentAddress  {
+    padding: 0.875rem 4.5rem;
+    border-radius: 0.625rem;
+  }
+
+  .aboutContentAddress p {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .aboutContentInfo li {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+    text-align: center;
+  }
+
+}
+
