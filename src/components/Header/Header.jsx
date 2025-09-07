@@ -6,6 +6,8 @@ import schoolLogo from "../../assets/images/header/school21_logo.svg";
 import rudnLogo from "../../assets/images/header/rudn_logo.svg";
 import x from "../../assets/images/header/x.svg";
 
+import HeaderBurger from "../HeaderBurger/HeaderBurger";
+
 function Header() {
   return (
     <header className={styles.header}>
@@ -25,6 +27,8 @@ function Header() {
 
             
           </div>
+
+          <HeaderBurger items={headerItems} />
 
           <nav className={styles.nav}>
             <ul className={styles.navList}>

@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 import animationData from '../../assets/models/cube-animation.json';
 
+import CubeStyles from "./Cube.module.scss";
+
 export default function LottieExample() {
   const container = useRef(null);
 
@@ -14,22 +16,12 @@ export default function LottieExample() {
       animationData: animationData,
     });
 
-    return () => anim.destroy(); // очистка при размонтировании
+    return () => anim.destroy(); 
   }, []);
 
   return (
-    <div
+    <div className={CubeStyles.heroCube}
       ref={container}
-      style={{
-        width: "clamp(600px, 49vw, 1035px)",
-        height: "clamp(300px, 30vw, 582px)",
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        zIndex: 9999,
-        pointerEvents: 'none',
-      }}
     ></div>
   );
 }

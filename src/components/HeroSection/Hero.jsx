@@ -2,25 +2,21 @@ import React from "react";
 import HeroStyles from "./Hero.module.scss";
 import Button from "../Button/Button";
 
-// import { Canvas } from "@react-three/fiber";
-// import { OrbitControls } from "@react-three/drei";
-// import { useRef } from "react";
-// import { Mesh } from "three";
-
 import LottieExample from "../../components/HeroCube/Cube";
-
 
 import { heroesTitle } from "../../data/heroes";
 import { heroesText } from "../../data/heroes";
 import { heroesBtn } from "../../data/heroes";
 
 import robotHand from "../../assets/images/hero/robot-hand.png";
+import robotHandMobile from "../../assets/images/hero/robot-hand-mobile.png";
 import humanHand from "../../assets/images/hero/human-hand.png";
+import humanHandTablet from "../../assets/images/hero/human-hand-tablet.png";
+import humanHandMobile from "../../assets/images/hero/human-hand-mobile.png";
 import textTitle from "../../assets/images/hero/ШКОЛА.png";
 import heroLine from "../../assets/icons/hero-line.svg";
+import heroLineMobile from "../../assets/icons/hero-line-mobile.svg";
 import SectionTitle from "../SectionTitle/SectionTitle";
-
-
 
 function Hero() {
   return (
@@ -28,7 +24,10 @@ function Hero() {
       className={HeroStyles.hero}
       style={{
         "--hand-img": `url(${humanHand})`,
+        "--hand-img-tablet": `url(${humanHandTablet})`,
+        "--hand-img-mobile": `url(${humanHandMobile})`,
         "--robot-img": `url(${robotHand})`,
+        "--robot-img-mobile": `url(${robotHandMobile})`,
       }}
     >
       <div className="wrap">
@@ -40,30 +39,8 @@ function Hero() {
           />
 
           <LottieExample />
-        
-  {/* Тут 3d куб  */}
-
-  {/* <Canvas
-    camera={{ position: [5, 0, 5], fov: 75 }}
-    style={{
-      position: "absolute",  
-      top: 0,
-      left: 0,
-      width: "80%",
-      height: "80%",
-      zIndex: 1,             
-      pointerEvents: "none",
-    }}
-  >
-    <ambientLight intensity={0.5} />
-    <directionalLight position={[2, 17, 89]} />
-    <Cube />
-    <OrbitControls enableZoom={false} enablePan={false} />
-  </Canvas> */}
-
 
           <div className={HeroStyles.heroText}>
-
             <SectionTitle>
               {heroesTitle.lines.map((line, index) => (
                 <span key={index}>
@@ -73,17 +50,18 @@ function Hero() {
               ))}
             </SectionTitle>
 
-  
-     
-
             <div className={HeroStyles.heroApply}>
-              <img src={heroLine} alt="Иконка 'стрелка на право'" />
+              <picture>
+                <source media="(max-width: 490px)" srcSet={heroLineMobile} />
+                <img src={heroLine} alt="Иконка 'стрелка на право'" />
+              </picture>
 
               <span>{heroesText.title}</span>
 
-                <Button className={HeroStyles.heroApplyBtn} text={heroesBtn.title} />
-
-              
+              <Button
+                className={HeroStyles.heroApplyBtn}
+                text={heroesBtn.title}
+              />
             </div>
           </div>
         </div>

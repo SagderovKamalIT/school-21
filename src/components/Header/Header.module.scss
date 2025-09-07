@@ -197,17 +197,151 @@
   }
 }
 
-@media (max-width: 824px) {
+@media (max-width: 884px) {
 
+  .header {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .headerLink {
+    gap: clamp(0.5rem, 2vw, 1rem);
+  }
+
+  .headerLinkSber img {
+    width: clamp(22px, 5vw, 35px);
+    height: auto;
+  }
+
+  .headerLinkRudn img {
+    width: clamp(65px, 12vw, 95px);
+    height: auto;
+  }
+
+  .imageX {
+    width: clamp(0.7rem, 2vw, 1rem);
+    height: auto;
+  }
+
+  .nav {
+    padding: clamp(4px, 0.5vw, 6px) clamp(10px, 1.5vw, 14px);
+    border-radius: clamp(1rem, 1.5vw, 1.8rem);
+  }
 
   .navList {
-    gap: clamp(1.5rem, 2.5vw, 3.94rem);
+     gap: clamp(0.5rem, 2vw, 1rem);
     align-items: center;
   }
 
   .navItem a {
-    font-size: clamp(0.5rem, 1.5vw, 0.75rem);
+    font-size: clamp(0.65rem, 1vw, 0.85rem);
+  }
+
+  .navButton {
+    @include btn(
+      $white,
+      $black,
+      clamp(0.7rem, 1.5vw, 0.9rem),
+      0.25rem,
+      0.75rem,
+      0.25rem,
+      0.75rem,
+      3.5rem
+    );
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    padding: clamp(0.2rem, 0.8vw, 0.4rem) clamp(0.6rem, 1.5vw, 1rem);
+  }
+
+}
+
+
+@media (max-width: 690px) {
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .headerLink {
+    gap: clamp(0.3rem, 1.5vw, 0.7rem);
+  }
+
+  .headerLinkSber img {
+    width: clamp(20px, 6vw, 28px);
+    height: auto;
+  }
+
+  .headerLinkRudn img {
+    width: clamp(55px, 14vw, 80px);
+    height: auto;
+  }
+
+  .imageX {
+    width: clamp(0.6rem, 2vw, 0.8rem);
+    height: auto;
+  }
+
+  .nav {
+    padding: clamp(2px, 0.5vw, 4px) clamp(6px, 1vw, 10px);
+    border-radius: clamp(0.8rem, 1vw, 1.2rem);
+  }
+
+  .navList {
+    gap: clamp(0.3rem, 1.5vw, 0.8rem);
+    align-items: center;
+  }
+
+  .navItem a {
+    font-size: clamp(0.6rem, 1vw, 0.75rem);
+  }
+
+  .navButton {
+    @include btn(
+      $white,
+      $black,
+      clamp(0.6rem, 1.2vw, 0.8rem),
+      0.2rem,
+      0.5rem,
+      0.2rem,
+      0.5rem,
+      3rem
+    );
+    font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+    padding: clamp(0.15rem, 0.5vw, 0.3rem) clamp(0.4rem, 1vw, 0.7rem);
+  }
+}
+
+@media (max-width: 480px) {
+
+  .nav {
+    display: none;
+  }
+
+  .header {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .headerLink {
+    gap: clamp(0.3rem, 1.5vw, 0.6rem);
+  }
+
+  .headerLinkSber img {
+    width: clamp(20px, 8vw, 32px);
+    height: auto;
+  }
+
+  .headerLinkRudn img {
+    width: clamp(55px, 20vw, 86px);
+    height: auto;
+  }
+
+  .imageX {
+    width: clamp(0.6rem, 3vw, 1rem);
+    height: auto;
   }
 
 
+
+
 }
+

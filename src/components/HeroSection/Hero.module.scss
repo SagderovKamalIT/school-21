@@ -3,7 +3,7 @@
 @use "../../styles/mixins" as *;
 
 .hero {
-  padding-top: clamp(3rem, 10vh, 7.5rem);
+  padding-top: clamp(3rem, 10vh, 9.5rem);
   position: relative;
 }
 
@@ -17,7 +17,6 @@
   z-index: 0;
   inset: 0;
   pointer-events: none;
-  
 }
 
 .hero::before {
@@ -41,13 +40,11 @@
   margin: 0 auto;
 }
 
-
-
 .heroContainerImg {
-  width: clamp(40rem, 60vw, 78.375rem);
+  width: clamp(65rem, 60vw, 78.375rem);
   height: auto;
   margin: 0 auto;
-    position: relative;
+  position: relative;
   z-index: -1;
 }
 
@@ -66,6 +63,7 @@
   flex-direction: row;
   gap: clamp(0.5rem, 1vw, 1.188rem);
   align-items: center;
+  width: fit-content;
 
   img {
     width: clamp(3rem, 5vw, 5.375rem);
@@ -87,16 +85,25 @@
       $dark-jungle-green,
       clamp(1rem, 2vw, 1.5rem),
       clamp(0.2rem, 1vw, 0.438rem),
-      clamp(5rem, 5vw, 10.125rem),
+      clamp(4rem, 5vw, 10.125rem),
       clamp(0.2rem, 1vw, 0.438rem),
-      clamp(5rem, 5vw, 10.125rem),
+      clamp(4rem, 5vw, 10.125rem),
       clamp(2.5rem, 3vw, 4.375rem)
     );
     font-weight: 700;
   }
 }
 
-@media (max-width: 1680px) {
+@media (max-width: 1460px) {
+  .hero::after {
+    background-size: clamp(500px, 50vh, 800px);
+    background-position: right calc(100% + 8rem);
+  }
+
+  .hero::before {
+    background-size: clamp(720px, 65vh, 1000px);
+    background-position: left calc(100% + 10rem);
+  }
 
   .heroApply {
     gap: clamp(0.2rem, 0.6vw, 1rem);
@@ -117,11 +124,152 @@
 }
 
 @media (max-width: 1280px) {
+  .hero::after {
+    background-size: clamp(400px, 43vh, 650px);
+    background-position: right calc(100% + 6.5rem);
+  }
 
+  .hero::before {
+    background-size: clamp(620px, 55vh, 900px);
+    background-position: left calc(100% + 6rem);
+  }
+
+  .heroContainerImg {
+    width: clamp(55rem, 50vw, 65rem);
+  }
+
+  .heroApply {
+    span,
+    button {
+      font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    }
+
+    button {
+      padding: clamp(0.1rem, 1vw, 0.3rem) clamp(1rem, 2.5vw, 4rem);
+    }
+  }
 }
 
 @media (max-width: 1024px) {
+  .hero {
+    padding-top: 2.5rem;
+  }
 
+  .heroContainer {
+    gap: clamp(9rem, 14vh, 12.438rem);
+  }
+
+  .heroContainerImg {
+    width: clamp(40rem, 40vw, 45.8rem);
+  }
+
+  .hero::after {
+    background-image: var(--hand-img-tablet);
+    background-size: clamp(300px, 34vh, 498px);
+    background-position: right calc(100% + 5.5rem);
+  }
+
+  .hero::before {
+    background-size: clamp(450px, 45vh, 792px);
+    background-position: left calc(100% + 4rem);
+  }
+
+  .heroText {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1vw, 0.938rem);
+
+    h2 {
+      font-weight: 700;
+    }
+  }
+
+  .heroApply {
+    span,
+    button {
+      font-size: clamp(0.5rem, 1.5vw, 0.85rem);
+    }
+
+    button {
+      padding: clamp(0.2rem, 1vw, 0.4rem) clamp(2rem, 2.5vw, 4.2rem);
+    }
+  }
 }
 
+@media (max-width: 884px) {
+  .hero::after {
+    background-size: clamp(320px, 29vh, 400px);
+    background-position: right calc(100% + 3.5rem);
+  }
 
+  .hero::before {
+    background-size: clamp(300px, 39vh, 600px);
+    background-position: left calc(100% + 2rem);
+  }
+
+  .heroContainerImg {
+    width: clamp(30rem, 72vw, 35rem);
+  }
+}
+
+@media (max-width: 690px) {
+  .hero::after {
+    background-size: clamp(280px, 20vh, 400px);
+    background-position: right calc(100% + 2rem);
+  }
+
+  .hero::before {
+    background-size: clamp(250px, 32vh, 600px);
+    background-position: left calc(100% + 1.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 2.163rem;
+  }
+
+  .heroContainerImg {
+    width: clamp(12rem, 72vw, 19.6rem);
+  }
+
+  .heroText {
+    gap: 0;
+  }
+
+  .hero::after {
+    background-image: var(--hand-img-mobile);
+    background-size: clamp(120px, 31vh, 238px);
+    background-position: right calc(100% + -1rem);
+  }
+
+  .hero::before {
+    background-image: var(--robot-img-mobile);
+    background-size: clamp(220px, 35vh, 348px);
+    background-position: left calc(100% + -8.5rem);
+  }
+
+  .heroApply {
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    span {
+      font-size: 0.75rem;
+      padding: 8.5px 22px 8.5px 53px;
+    }
+
+    button {
+      padding: 18px 0;
+      width: 100%;
+      font-size: 12px;
+    }
+
+    img {
+      position: absolute;
+      left: -8vw;
+      top: 5vh;
+      width: 77px;
+    }
+  }
+}

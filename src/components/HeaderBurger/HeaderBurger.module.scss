@@ -1,0 +1,115 @@
+@use "../../styles/variables" as *;
+@use "../../styles/core" as *;
+@use "../../styles/mixins" as *;
+
+.burger__btn {
+  display: none;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 480px) {
+
+  
+.burger__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+
+.burger__btn-span,
+.burger__btn-span::before,
+.burger__btn-span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+ transition: transform 200ms ease, opacity 200ms ease, top 200ms ease, background 200ms ease;
+  background: $dark-jungle-green;
+}
+.burger__btn-span { top: 50%; }
+.burger__btn-span::before { top: -8px; }
+.burger__btn-span::after { top: 8px; }
+
+.burger-btn__open .burger__btn-span {
+  transform: translateX(-50%) rotate(45deg);
+  background: $white;
+}
+.burger-btn__open .burger__btn-span::before {
+  opacity: 0;
+   background: $white;
+}
+.burger-btn__open .burger__btn-span::after {
+  transform: translateX(-50%) rotate(-90deg);
+  top: 0;
+   background: $white;
+}
+
+.burger {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background 200ms ease;
+  z-index: 9999;
+}
+
+.burger__content {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  background: $dark-jungle-green;
+  transform: translateX(100%);
+  transition: transform 200ms ease;
+  padding: 53px 14px 19px 14px;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.1);
+}
+
+.burger__open {
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: auto;
+}
+.burger__open .burger__content {
+  transform: translateX(0);
+}
+
+.burger__nav {}
+.burger__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 29px;
+}
+.burger__nav-item a,
+.navButton {
+  display: block;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+  color: $white;
+  text-align: center;
+}
+
+.navButton {
+  padding: 15px 88px;
+  border-radius: 70px;
+  border: none;
+  color: $dark-jungle-green;
+  margin: 0 auto;
+}
+}
