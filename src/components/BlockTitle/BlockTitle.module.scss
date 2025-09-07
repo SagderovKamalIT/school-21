@@ -5,3 +5,22 @@
   padding: clamp( 0.5rem, 2vh, 1.063rem) clamp(0.8rem, 2vw, 1.188rem);
    width: fit-content; 
 }
+
+@media (max-width: 1024px) {
+
+  .BlockTitle {
+
+    padding: clamp(0.1rem, 2vh, 0.313rem) clamp(0.8rem, 2vw, 1.656rem);
+    font-size: clamp(0.7rem , 2vw , 1rem);
+  }
+}
+
+@media (max-width: 490px) {
+
+  .BlockTitle {
+
+    padding: clamp(0.1rem, 2vh, 0.438rem) clamp(0.8rem, 2vw, 1.813rem);
+    font-size: clamp(0.7rem , 2vw , 1rem);
+    
+  }
+}
