@@ -30,3 +30,41 @@
   margin: 0 auto;
   border: none;
 }
+
+@media (max-width: 1024px) {
+
+  .employersWrap {
+  gap: 2.063rem;
+}
+
+.title {
+  font-size: 1.25rem;
+}
+
+.employersButton {
+  padding: 0.875rem 4.25rem;
+  font-size: 1.25rem;
+  
+}
+
+}
+
+@media (max-width: 490px) {
+
+  
+  .employersWrap {
+  gap: 1.438rem;
+}
+
+.title {
+  font-size: 1rem;
+}
+
+.employersButton {
+  padding: 0.625rem 2.281rem;
+  font-size: 1rem;
+  
+}
+
+
+}
