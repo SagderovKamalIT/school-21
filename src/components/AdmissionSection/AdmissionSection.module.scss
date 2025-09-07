@@ -11,12 +11,10 @@
   display: flex;
   flex-direction: column;
   gap: 6.438rem;
-
-
 }
 
 .admissionContainer {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   row-gap: 6.25rem;
 }
@@ -27,12 +25,12 @@
 }
 
 .row1 {
-      column-gap: clamp(10rem, 25vw, 35rem);
-      position: relative;
+  column-gap: clamp(10rem, 25vw, 35rem);
+  position: relative;
 }
 
 .row1::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: clamp(10rem, 32vw, 33rem);
@@ -43,11 +41,10 @@
   height: 100%;
   background-position: center;
   z-index: -1;
-
 }
 
 .row1::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8vh;
   right: 5vw;
@@ -58,7 +55,6 @@
   height: 100%;
   background-position: right;
   z-index: -1;
-
 }
 
 .row2 {
@@ -67,50 +63,46 @@
 }
 
 .row2::after {
-   content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: clamp(10rem, 20vw, 33rem);
   background-image: url(../../assets//images//admission//vector-row2.png);
   background-size: cover;
   background-repeat: no-repeat;
-      width: clamp(12rem, 24vw, 26rem);
-  height: clamp(5rem, 20vh,12.5rem);
+  width: clamp(12rem, 24vw, 26rem);
+  height: clamp(5rem, 20vh, 12.5rem);
   background-position: center;
   z-index: -1;
-
 }
 
 .row3 {
-      gap: clamp(15rem, 29vw, 39.563rem);
-      position: relative;
+  gap: clamp(15rem, 29vw, 39.563rem);
+  position: relative;
 }
 
 .row3::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   bottom: 0;
   background-image: url(../../assets//images//admission//flag.png);
   background-repeat: no-repeat;
   background-size: contain;
-
 }
 
-
-
 .admissionContainerCard {
-display: flex;
-flex-direction: column;
-gap: 1.625rem;
- border-radius: 0.938rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  border-radius: 0.938rem;
   padding: 1.688rem 2.25rem;
   background-color: $yellowship-green;
   color: $dark-jungle-green;
   width: fit-content;
 
   h3 {
-    font-family: 'Minecraft-1-1-c', sans-serif;
+    font-family: "Minecraft-1-1-c", sans-serif;
     font-size: 2.25rem;
     text-transform: uppercase;
   }
@@ -121,18 +113,15 @@ gap: 1.625rem;
     font-weight: 400;
     color: $black;
   }
-
 }
 
- .extraText {
-    font-family: "Roboto-c", sans-serif;
-    font-size: 1.25rem !important;
-
-  }
+.extraText {
+  font-family: "Roboto-c", sans-serif;
+  font-size: 1.25rem !important;
+}
 
 .card2 {
   width: 30vw;
-
 }
 
 .card3 {
@@ -143,23 +132,171 @@ gap: 1.625rem;
   width: 22vw;
 }
 
+@media (max-width: 1024px) {
+  .admission {
+    padding-top: 4rem;
+  }
+
+  .admissionContent {
+    gap: 2.188rem;
+  }
+}
 
 @media (max-width: 1024px) {
+
   .admission {
   padding-top: 4rem;
 }
 
 .admissionContent {
+  gap: 2.5rem;
+}
 
+
+.row1 {
+  column-gap: clamp(7rem, 13vw, 12rem);
+  position: relative;
+}
+
+.row1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: clamp(10rem, 32vw, 33rem);
+  background-image: url(../../assets//images//admission//vector-row1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(10rem, 25vw, 35rem);
+  height: 100%;
+  background-position: center;
+  z-index: -1;
+}
+
+.row1::before {
+  content: "";
+  position: absolute;
+  bottom: -8vh;
+  right: 5vw;
+  background-image: url(../../assets//images//admission/vector-row1-to-2png.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(5rem, 25vw, 10.313rem);
+  height: 100%;
+  background-position: right;
+  z-index: -1;
+}
+
+
+.row2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: clamp(10rem, 20vw, 33rem);
+  background-image: url(../../assets//images//admission//vector-row2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: clamp(12rem, 24vw, 26rem);
+  height: clamp(5rem, 20vh, 12.5rem);
+  background-position: center;
+  z-index: -1;
+}
+
+.row3 {
+  gap: clamp(15rem, 29vw, 39.563rem);
+  position: relative;
+}
+
+.row3::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url(../../assets//images//admission//flag.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.admissionContainerCard {
+  gap: 0.875rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.875rem;
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+
+
+}
+
+@media (max-width: 780px) {
+  .admissionContainer,
+  .row {
+  flex-direction: column;
+  gap: 18px;
+
+  li {
+    width: 100%;
+  }
+}
+
+.admissionContent {
   gap: 2.188rem;
+  position: relative;
+}
+
+.admissionContainerCard {
+  padding: 1rem 1.625rem;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  .extraText {
+    font-size: 0.75rem !important;
+  }
 
 
 }
 
+.admissionContent::before {
+  position: absolute;
+  content: '';
+  background-image: url(../../assets//images//admission//student.png);
+  background-size: cover;
+  width: 5.688rem;
+  height: 5.688rem;
+  right: 5vw;
+  top: -2vh;
 
 }
 
+.admissionContent::after {
+    position: absolute;
+  content: '';
+  background-image: url(../../assets//images/admission//flag.png);
+  background-size: cover;
+  width: 4.438rem;
+  height: 5.5rem;
+  right: 5vw;
+  bottom: 4vh;
+   transform: rotate(15deg);
+   transform-origin: center;
+}
+
+.row1::before,
+.row1::after,
+.row2::after {
+  display: none;
+}
 
 
-
-
+  
+}

@@ -27,7 +27,7 @@ function App() {
       <TrainingTasks />
       <JobPrep />
       <Employers />
-      {/* <Admission /> */}
+      <Admission />
       <SelectionCriteria />
       <AboutSchool />
       <ContactForm />

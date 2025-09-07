@@ -226,11 +226,15 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding-top: 2.163rem;
+    padding-top: 3.163rem;
+  }
+
+  .heroContainer {
+    gap: 16rem;
   }
 
   .heroContainerImg {
-    width: clamp(12rem, 72vw, 19.6rem);
+    width: clamp(15rem, 84vw, 19.6rem);
   }
 
   .heroText {
@@ -240,13 +244,13 @@
   .hero::after {
     background-image: var(--hand-img-mobile);
     background-size: clamp(120px, 31vh, 238px);
-    background-position: right calc(100% + -1rem);
+    background-position: right calc(100% + -4rem);
   }
 
   .hero::before {
     background-image: var(--robot-img-mobile);
-    background-size: clamp(220px, 35vh, 348px);
-    background-position: left calc(100% + -8.5rem);
+    background-size: clamp(220px, 25vh, 348px);
+    background-position: left calc(100% + -13.5rem);
   }
 
   .heroApply {
@@ -268,8 +272,22 @@
     img {
       position: absolute;
       left: -8vw;
-      top: 5vh;
+      top: 3vh;
       width: 77px;
     }
+  }
+}
+
+@media (max-width: 400px) {
+   .hero::after {
+    background-image: var(--hand-img-mobile);
+    background-size: clamp(120px, 31vh, 238px);
+    background-position: right calc(100% + -3rem);
+  }
+
+  .hero::before {
+    background-image: var(--robot-img-mobile);
+    background-size: clamp(220px, 25vh, 348px);
+    background-position: left calc(100% + -12.5rem);
   }
 }
