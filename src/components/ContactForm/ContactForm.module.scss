@@ -58,6 +58,13 @@
   color: $dark-jungle-green;
   font-weight: 700;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($yellowship-green, 10%); 
+    color: white; 
+
+  }
 }
 
 .contactFormItem {

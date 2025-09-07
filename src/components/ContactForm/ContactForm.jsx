@@ -7,7 +7,7 @@ import { contactFormData } from "../../data/contactForm";
 function ContactForm() {
   const formRef = useRef(null);
   const [email, setEmail] = useState("");
-  const [agreementChecked, setAgreementChecked] = useState(false); // новое состояние
+  const [agreementChecked, setAgreementChecked] = useState(false); 
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
