@@ -13,3 +13,17 @@
   flex-direction: column;
   gap: 4.688rem;
 }
+
+@media (max-width: 1024px) {
+
+  .trainingBlock,
+  .cards {
+    gap: 2.625rem;
+  }
+
+}
+
+@media (max-width: 490px) {
+  
+
+}

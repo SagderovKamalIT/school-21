@@ -10,6 +10,13 @@ import { trainingTasksData } from "../../data/trainingTasks";
 
 import arrowLeft from "../../assets/images/trainingTasks/arrow-left.svg";
 import arrowRight from "../../assets/images/trainingTasks/arrow-right.svg";
+import arrowRightMobile from "../../assets/images/trainingTasks/arrow-right-mobile.svg";
+
+
+
+
+import arrowLeftTablet from "../../assets/images/trainingTasks/arrow-left-tablet.svg";
+import arrowRightTablet from "../../assets/images/trainingTasks/arrow-right-tablet.svg";
 
 
 function TrainingTasksCard({ id, title, paragraphs, details, highlights, skills , slogan, sloganTitle, sloganParagraph, sloganButton}) {

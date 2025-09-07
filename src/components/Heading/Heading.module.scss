@@ -4,3 +4,15 @@
   font-size: 4rem;
   text-transform: uppercase;
 }
+
+@media (max-width: 1024px) {
+  .heading-h2 {
+  font-size: 2.25rem;
+}
+}
+
+@media (max-width: 490px) {
+  .heading-h2 {
+  font-size: 1.5rem;
+}
+}
