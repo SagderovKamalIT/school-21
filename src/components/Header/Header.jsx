@@ -1,4 +1,5 @@
 import styles from "./Header.module.scss";
+import { motion } from "framer-motion";
 
 import { headerItems } from "../../data/header";
 
@@ -14,20 +15,27 @@ function Header() {
       <div className="wrap">
         <div className={styles.headerContainer}>
           <div className={styles.headerLink}>
-            <a className={styles.headerLinkSber} href="https://21-school.ru/" target="_blank"
-              rel="noopener noreferrer">
+            <a
+              className={styles.headerLinkSber}
+              href="https://21-school.ru/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={schoolLogo} alt="Логотип 'ШКОЛА_21'" />
             </a>
 
             <a className={styles.imageX} href="">
               <img className={styles.imageX} src={x} alt="x" />
             </a>
-            <a className={styles.headerLinkRudn} href="https://www.rudn.ru/" target="_blank"
-              rel="noopener noreferrer">
+
+            <a
+              className={styles.headerLinkRudn}
+              href="https://www.rudn.ru/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={rudnLogo} alt="Логотип 'РУДН'" />
             </a>
-
-            
           </div>
 
           <HeaderBurger items={headerItems} />
@@ -36,13 +44,39 @@ function Header() {
             <ul className={styles.navList}>
               {headerItems.map((item, index) => {
                 return (
-                  <li key={index} className={styles.navItem}>
+                  <motion.li
+                    key={index}
+                    className={styles.navItem}
+                    whileHover={{
+                      scale: 1,
+                      color: "#A0E720",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     {item.isButton ? (
-                      <button className={styles.navButton}>{item.title}</button>
+                      <motion.button
+                        className={styles.navButton}
+                        whileHover={{
+                          backgroundColor: "#A0E720",
+                          color: "#fff",
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {item.title}
+                      </motion.button>
                     ) : (
-                      <a href={item.link}>{item.title}</a>
+                      <motion.a
+                        href={item.link}
+                        whileHover={{ scale: 1.05, color: "#A0E720" }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.1 }}
+                      >
+                        {item.title}
+                      </motion.a>
                     )}
-                  </li>
+                  </motion.li>
                 );
               })}
             </ul>
