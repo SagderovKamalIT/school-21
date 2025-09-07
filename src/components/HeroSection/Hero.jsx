@@ -61,6 +61,11 @@ function Hero() {
               <Button
                 className={HeroStyles.heroApplyBtn}
                 text={heroesBtn.title}
+
+                  onClick={() => {
+                          const formSection = document.getElementById("faq");
+                          formSection?.scrollIntoView({ behavior: "smooth" });
+                        }}
               />
             </div>
           </div>

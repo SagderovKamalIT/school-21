@@ -63,6 +63,10 @@ function Header() {
                         }}
                         whileTap={{ scale: 0.95 }}
                         transition={{ duration: 0.3 }}
+                        onClick={() => {
+                          const formSection = document.getElementById("faq");
+                          formSection?.scrollIntoView({ behavior: "smooth" });
+                        }}
                       >
                         {item.title}
                       </motion.button>

@@ -11,6 +11,8 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
 import Admission from "./components/AdmissionSection/AdmissinSection";
 
+import YandexMetrica from "./components/YandexMetrica/YandexMetrica";
+
 
 import "./styles/main.scss"
 
@@ -20,6 +22,8 @@ import "./styles/main.scss"
 function App() {
   return (
     <>
+
+     <YandexMetrica />
      <Header />
         
       <Hero />
