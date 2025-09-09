@@ -5,16 +5,28 @@ import rudnLogo from "../../assets/icons/footer/rudn-logo.svg";
 import school21Logo from "../../assets/icons/footer/school-21-logo.svg";
 import vkLogo from "../../assets/icons/footer/vk-logo.svg";
 import telegramLogo from "../../assets/icons/footer/telegram-logo.svg";
+import x from "../../assets/icons/footer/x.svg";
 
 const links = [
-  { href: "https://21-school.ru/", img: school21Logo, alt: "school21-logo" },
-  { href: "https://www.rudn.ru/", img: rudnLogo, alt: "RUDN Logo" }
+  { href: "https://21-school.ru/", img: school21Logo, alt: "school21-logo", className: "schoolLogo" },
+  { href: "/", img: x, alt: "x", className: "xLogo" },
+  { href: "https://www.rudn.ru/", img: rudnLogo, alt: "RUDN Logo", className: "rudnLogo" }
 ];
 
+
 const socialLinks = [
-  { href: "https://vk.com", img: vkLogo, alt: "VK Logo" },
-  { href: "https://t.me", img: telegramLogo, alt: "Telegram Logo" }
+  { href: "https://vk.com/coding21", img: vkLogo, alt: "VK Logo" },
+  { href: "https://t.me/+MRsv0D63SqZjMjIy", img: telegramLogo, alt: "Telegram Logo" }
 ];
+
+const text = [
+  {
+    title: "© Российский университет дружбы народов, 2025."
+  },
+  {
+    href: "/", title: "Политика обработки персональных данных"
+  }
+]
 
 
 function Footer() {
@@ -29,8 +41,18 @@ function Footer() {
 
           <div className={FooterStyles.footerLinks}>
             {links.map((link, index) => (
-              <a key={index} href={link.href} target="_blank" rel="noopener noreferrer">
-                <img src={link.img} alt={link.alt} />
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${FooterStyles.footerLink} ${FooterStyles[link.className]}`}
+              >
+                <img
+                  src={link.img}
+                  alt={link.alt}
+                  className={`${FooterStyles.footerLinkImg} ${FooterStyles[`${link.className}Img`]}`}
+                />
               </a>
             ))}
           </div>
@@ -48,6 +70,34 @@ function Footer() {
             ))}
           </div>
         </div>
+
+
+
+        <div className={FooterStyles.footerText}>
+          {text.map((item, index) =>
+            item.href ? (
+              <a
+                key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${FooterStyles.footerTextItem} ${FooterStyles.footerTextLink}`} 
+              >
+                {item.title}
+              </a>
+            ) : (
+              <span
+                key={index}
+                className={`${FooterStyles.footerTextItem} ${FooterStyles.footerTextSpan}`} 
+              >
+                {item.title}
+              </span>
+            )
+          )}
+        </div>
+
+
+
 
       </div>
 
