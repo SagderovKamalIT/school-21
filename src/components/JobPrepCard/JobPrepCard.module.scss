@@ -2,7 +2,7 @@
 @use "../../styles/core" as *;
 @use "../../styles/mixins" as *;
 .card {
-  padding: 4.875rem 4.938rem;
+  padding: 3.875rem 2.938rem;
   border: 0.188rem solid $dark-jungle-green;
   border-radius: 1.75rem;
 }
@@ -29,8 +29,28 @@
 }
 
 .cardImage {
+  padding-right: 0;
   width: clamp(122px, 31%, 600px);
   height: auto;
+}
+
+@media (max-width: 1600px) {
+  .card {
+  padding: 2.875rem 2.938rem;
+}
+
+ .cardText {
+  font-size: 1.8rem;
+}
+
+.imageWrapper {
+  padding-right: 0;
+}
+
+.cardImage {
+  width: clamp(95px, 31%, 300px);
+  height: auto;
+}
 }
 
 @media (max-width: 1170px) {
@@ -56,6 +76,3 @@
   }
 }
 
-@media (max-width: 490px) {
-   
-}

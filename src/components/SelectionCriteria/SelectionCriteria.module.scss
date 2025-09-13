@@ -72,6 +72,14 @@
   height: auto;
 }
 
+@media (max-width: 1350px) {
+
+  .dayItem {
+  font-size: 1.65rem;
+  }
+
+}
+
 @media (max-width: 1024px) {
 
   .selectionSection {

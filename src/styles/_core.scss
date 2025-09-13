@@ -69,6 +69,11 @@ a {
 
 button {
   font-family: inherit;
+  cursor: pointer;
+
+  &:hover {
+  filter: brightness(0.9);
+  }
 }
 
 @media (max-width: 1460px) {
@@ -114,6 +119,14 @@ button {
   .wrap {
     padding: 0 2rem;
   }
+
+  button {
+  cursor: none;
+
+   &:hover {
+  filter: none;
+  }
+}
 
  
 }

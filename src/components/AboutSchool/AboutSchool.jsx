@@ -48,7 +48,7 @@ function AboutSchool() {
 
                 <div className={AboutSchoolStyles.aboutContentAddress}>
                   {aboutSchoolData.address.map((item, index) => (
-                    <p key={index}>{item.text}</p>
+                    <p  key={index}>{item.text}</p>
                   ))}
                 </div>
               </div>

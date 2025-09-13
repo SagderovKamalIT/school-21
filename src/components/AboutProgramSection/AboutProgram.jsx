@@ -34,7 +34,7 @@ function AboutProgram() {
                 </SectionTitle>
               </motion.div>
 
-              <Paragraph className={AboutProgramStyles.paragraph}>
+              <Paragraph style={{ whiteSpace: "pre-line" }} className={AboutProgramStyles.paragraph}>
                 {aboutProgramParagraph.text}
               </Paragraph>
             </div>

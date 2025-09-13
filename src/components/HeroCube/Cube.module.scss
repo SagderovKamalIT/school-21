@@ -5,7 +5,7 @@
 
 .heroCube {
   width: clamp(900px, 56vw, 1035px);
-  height: clamp(300px, 43vh, 582px);
+  height: clamp(300px, 30vh, 582px);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -18,7 +18,7 @@
 
   .heroCube {
   width: clamp(400px, 60vw, 800px);
-  height: clamp(200px, 40vh, 400px);
+  height: clamp(200px, 20vh, 400px);
 }
 
 }
@@ -27,7 +27,7 @@
 
   .heroCube {
     width: clamp(200px, 70vw, 392px);
-    height: clamp(150px, 35vh, 285px);
+    height: clamp(150px, 15vh, 285px);
 
   }
 
@@ -36,7 +36,7 @@
 @media (max-width: 690px) {
   .heroCube {
     width: clamp(200px, 50vw, 392px);
-    height: clamp(150px, 20vh, 285px);
+    height: clamp(150px, 10vh, 285px);
 
   }
 }
@@ -45,7 +45,7 @@
     .heroCube {
        top: 37%;
     width: clamp(300px, 50vw, 300px);
-    height: clamp(150px, 20vh, 228px);
+    height: clamp(150px, 10vh, 228px);
 
   }
 }

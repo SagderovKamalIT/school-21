@@ -59,12 +59,6 @@ function Admission() {
                       ${admissionStyles[`card-${rowIndex + 1}-${itemIndex + 1}`]}
                     `}
                     variants={cardVariants}
-                    whileHover={{
-                      scale: 1.05, 
-                      boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.2)",
-                      transition: { duration: 0.3 },
-                    }}
-                    whileTap={{ scale: 0.98 }} 
                   >
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>

@@ -89,9 +89,13 @@
       clamp(0.2rem, 1vw, 0.438rem),
       clamp(4rem, 5vw, 10.125rem),
       clamp(2.5rem, 3vw, 4.375rem)
+
+      
     );
     font-weight: 700;
   }
+
+  
 }
 
 @media (max-width: 1460px) {

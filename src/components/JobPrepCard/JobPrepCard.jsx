@@ -12,7 +12,7 @@ function JobPrepCard({text, image}) {
 
    <div className={JobCardsStyle.card}>
       <div className={JobCardsStyle.cardContainer}>
-        <p className={JobCardsStyle.cardText}>{text}</p>
+        <p  style={{ whiteSpace: "pre-line" }} className={JobCardsStyle.cardText}>{text}</p>
         
         <div className={JobCardsStyle.imageWrapper}>
 

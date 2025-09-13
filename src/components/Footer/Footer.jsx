@@ -24,7 +24,7 @@ const text = [
     title: "© Российский университет дружбы народов, 2025."
   },
   {
-    href: "/", title: "Политика обработки персональных данных"
+    href: "https://www.rudn.ru/storage/media/documents/e1bee4fb-c76b-46e2-9a94-4a81c0037db3/HF49MKfGpR7GqAoseQSjFQGbuRuBjWwsLrdCqGax.pdf", title: "Политика обработки персональных данных"
   }
 ]
 

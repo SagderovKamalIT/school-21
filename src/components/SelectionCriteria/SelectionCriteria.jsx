@@ -21,6 +21,7 @@ function SelectionCriteria() {
               <li key={idx} className={SelectionStyles.selectionlistItem}>
                 {item.parts.map((part, i) => (
                   <span
+                    style={{ whiteSpace: "pre-line" }}
                     key={i}
                     className={part.style === "bold" ? SelectionStyles.boldText : ""}
                   >
@@ -36,7 +37,7 @@ function SelectionCriteria() {
               <React.Fragment key={idx}>
                 <div className={SelectionStyles.dayItem}>
                   <span className={SelectionStyles.label}>{day.label}</span>
-                  <span className={SelectionStyles.value}>
+                  <span  className={SelectionStyles.value}>
                     {day.value?.trim() === "появятся позже" ? (
                       <Typewriter
                         words={[day.value.trim()]} 

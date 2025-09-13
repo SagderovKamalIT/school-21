@@ -32,8 +32,8 @@ function TrainingTasksCard({
     id === "ai-engineer"
       ? TrainingCardStyles.cardAI
       : id === "digital-managers"
-      ? TrainingCardStyles.cardDigital
-      : TrainingCardStyles.card;
+        ? TrainingCardStyles.cardDigital
+        : TrainingCardStyles.card;
 
   return (
     <article className={`${TrainingCardStyles.card} ${cardClass}`}>
@@ -83,7 +83,7 @@ function TrainingTasksCard({
         </div>
 
         <div className={TrainingCardStyles.sloganBlock}>
-          <h3 className={TrainingCardStyles.slogan}>{slogan}</h3>
+          <h3 style={{ whiteSpace: "pre-line" }} className={TrainingCardStyles.slogan}>{slogan}</h3>
 
           <div className={TrainingCardStyles.sloganBlockText}>
             <h4 className={TrainingCardStyles.sloganTitle}>{sloganTitle}</h4>
@@ -102,6 +102,12 @@ function TrainingTasksCard({
           <Button
             className={TrainingCardStyles.sloganButton}
             text={sloganButton}
+
+            onClick={() => {
+              const formSection = document.getElementById("faq");
+              formSection?.scrollIntoView({ behavior: "smooth" });
+            }}
+
           ></Button>
 
           <picture className={TrainingCardStyles.buttonContainerArrow}>

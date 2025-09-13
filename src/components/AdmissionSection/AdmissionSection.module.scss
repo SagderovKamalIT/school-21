@@ -19,22 +19,15 @@
   row-gap: 6.25rem;
 }
 
-
 .row {
   display: flex;
   flex-direction: row;
 }
 
-
-
 .row1 {
   column-gap: clamp(10rem, 25vw, 35rem);
-   position: relative;
+  position: relative;
 }
-
-
-
-
 
 .row2 {
   position: relative;
@@ -42,31 +35,46 @@
 }
 
 
+.row2::after {
+  position: absolute;
+  content: "";
+  background-image: url(../../assets//images//admission//student.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+      width: 16.8rem;
+    height: 16.8rem;
+    bottom: 0;
+    right: 25vw;
+  transform-origin: center;
+}
+
 .row3 {
   gap: clamp(15rem, 29vw, 39.563rem);
   position: relative;
-  
 }
 
+.card-1-1,
+.card-1-2,
+.card-2-1,
+.card-2-2,
+.card-3-1,
 .card-3-2 {
   position: relative;
 }
 
 
 
-
 .card-3-2::after {
   position: absolute;
-    content: '';
+  content: "";
   background-image: url(../../assets/images//admission//flag.png);
-   background-size: cover;
+  background-size: cover;
   width: 7.438rem;
   height: 8.5rem;
   right: 2vw;
   bottom: 9vh;
-   transform: rotate(15deg);
-   transform-origin: center;
-
+  transform: rotate(15deg);
+  transform-origin: center;
 }
 
 .admissionContainerCard {
@@ -102,12 +110,25 @@
   width: 30vw;
 }
 
+
+
+
 .card3 {
   width: 50vw;
 }
 
 .card4 {
   width: 22vw;
+}
+
+@media (max-width: 1240px) {
+  .row2::after {
+    width: 15.8rem;
+    height: 15.8rem;
+    bottom: 0;
+    right: 23vw;
+    transform-origin: center;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -121,125 +142,124 @@
 }
 
 @media (max-width: 1024px) {
-
   .admission {
-  padding-top: 4rem;
-}
-
-.admissionContent {
-  gap: 2.5rem;
-}
-
-
-.row1 {
-  column-gap: clamp(7rem, 13vw, 12rem);
-  position: relative;
-}
-
-
-
-
-
-.row3 {
-  gap: clamp(15rem, 29vw, 39.563rem);
-  position: relative;
-}
-
-.row3::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background-image: url(../../assets//images//admission//flag.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-
-.admissionContainerCard {
-  gap: 0.875rem;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1.875rem;
-
-  h3 {
-    font-size: 1.25rem;
+    padding-top: 4rem;
   }
 
-  p {
-    font-size: 1rem;
+  .admissionContent {
+    gap: 2.5rem;
   }
-}
 
+  .row1 {
+    column-gap: clamp(7rem, 13vw, 12rem);
+    position: relative;
+  }
 
+  .row2::after {
+    width: 10rem;
+    height: 10rem;
+    bottom: 0;
+    right: 23vw;
+    transform-origin: center;
+  }
 
+  .card-3-2::after {
+    width: 5.438rem;
+    height: 6.5rem;
+    right: 2vw;
+    bottom: 4vh;
+  }
+
+  .row3 {
+    gap: clamp(15rem, 29vw, 39.563rem);
+    position: relative;
+  }
+
+  .row3::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url(../../assets//images//admission//flag.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .admissionContainerCard {
+    gap: 0.875rem;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.875rem;
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
 }
 
 @media (max-width: 780px) {
   .admissionContainer,
   .row {
-  flex-direction: column;
-  gap: 18px;
+    flex-direction: column;
+    gap: 18px;
 
-  li {
-    width: 100%;
-  }
-}
-
-.admissionContent {
-  gap: 2.188rem;
-  position: relative;
-}
-
-.admissionContainerCard {
-  padding: 1rem 1.625rem;
-
-  h1 {
-    font-size: 1.5rem;
+    li {
+      width: 100%;
+    }
   }
 
-  p,
-  .extraText {
-    font-size: 0.75rem !important;
+  .admissionContent {
+    gap: 2.188rem;
+    position: relative;
   }
 
+  .admissionContainerCard {
+    padding: 1rem 1.625rem;
 
-}
+    h1 {
+      font-size: 1.5rem;
+    }
 
-.admissionContent::before {
-  position: absolute;
-  content: '';
-  background-image: url(../../assets//images//admission//student.png);
-  background-size: cover;
-  width: 5.688rem;
-  height: 5.688rem;
-  right: 5vw;
-  top: -2vh;
+    p,
+    .extraText {
+      font-size: 0.75rem !important;
+    }
+  }
 
-}
-
-.admissionContent::after {
+  .admissionContent::before {
     position: absolute;
-  content: '';
-  background-image: url(../../assets//images/admission//flag.png);
-  background-size: cover;
-  width: 4.438rem;
-  height: 5.5rem;
-  right: 5vw;
-  bottom: 4vh;
-   transform: rotate(15deg);
-   transform-origin: center;
-}
+    content: "";
+    background-image: url(../../assets//images//admission//student.png);
+    background-size: cover;
+    width: 5.688rem;
+    height: 5.688rem;
+    right: 5vw;
+    top: -2vh;
+  }
 
-.row1::before,
-.row1::after,
-.row2::after {
-  display: none;
-}
+  .admissionContent::after {
+    position: absolute;
+    content: "";
+    background-image: url(../../assets//images/admission//flag.png);
+    background-size: cover;
+    width: 4.438rem;
+    height: 5.5rem;
+    right: 5vw;
+    bottom: 4vh;
+    transform: rotate(15deg);
+    transform-origin: center;
+  }
 
-.card-3-2::after  {
-  display: none;
-}
+  .row1::before,
+  .row1::after,
+  .row2::after {
+    display: none;
+  }
 
-
-  
+  .card-3-2::after {
+    display: none;
+  }
 }
