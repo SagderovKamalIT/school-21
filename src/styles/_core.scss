@@ -123,8 +123,10 @@ button {
   button {
   cursor: none;
 
-   &:hover {
-  filter: none;
+   button,
+  a {
+    cursor: default; 
+
   }
 }
 

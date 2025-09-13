@@ -2,7 +2,6 @@ import React from "react";
 import AboutSchoolStyles from "./AboutSchool.module.scss";
 import Heading from "../Heading/Heading";
 import { aboutSchoolData } from "../../data/aboutSchool";
-import { section } from "framer-motion/client";
 
 import Cluster from "../../assets/images/aboutSchool/cluster.png";
 import Coworking from "../../assets/images/aboutSchool/coworking.png";
@@ -10,7 +9,7 @@ import LectureHall from "../../assets/images/aboutSchool/lecture-hall.png";
 
 function AboutSchool() {
   return (
-    <section  id="campus">
+    <section id="campus">
       <div className="block-wrap">
         <div className={AboutSchoolStyles.aboutContainer}>
           <Heading className={AboutSchoolStyles.aboutContainerHeader}>
@@ -18,6 +17,7 @@ function AboutSchool() {
           </Heading>
 
           <div className={AboutSchoolStyles.aboutContent}>
+            {/* Левая часть */}
             <div className={AboutSchoolStyles.aboutContentLeft}>
               <div className={AboutSchoolStyles.aboutContentInfo}>
                 <div className={AboutSchoolStyles.aboutContentList}>
@@ -46,10 +46,23 @@ function AboutSchool() {
                   </ul>
                 </div>
 
+                {/* Блок с адресом */}
                 <div className={AboutSchoolStyles.aboutContentAddress}>
-                  {aboutSchoolData.address.map((item, index) => (
-                    <p  key={index}>{item.text}</p>
-                  ))}
+                  {aboutSchoolData.address.map((item, index) =>
+                    item.link ? (
+                      <a
+                        key={index}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ whiteSpace: "pre-line" }}
+                      >
+                        {item.text}
+                      </a>
+                    ) : (
+                      <p key={index}>{item.text}</p>
+                    )
+                  )}
                 </div>
               </div>
 
@@ -58,11 +71,12 @@ function AboutSchool() {
               </div>
             </div>
 
+            {/* Правая часть */}
             <div className={AboutSchoolStyles.aboutContentRight}>
               <div className={AboutSchoolStyles.aboutImageCoworking}></div>
 
               <div className={AboutSchoolStyles.aboutImageHall}>
-                 <img src={LectureHall} alt="LectureHall" /> 
+                <img src={LectureHall} alt="LectureHall" />
               </div>
             </div>
           </div>
@@ -71,4 +85,5 @@ function AboutSchool() {
     </section>
   );
 }
+
 export default AboutSchool;

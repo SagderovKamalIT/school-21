@@ -26,10 +26,12 @@ export const aboutSchoolData = {
   ],
   address: [
      {
-      text: "Кампус по адресу \nг. Москва, ул. Подольское шоссе, д.8 "
+      text: "Кампус по адресу г. Москва, \nул. Подольское шоссе, д.8 ",
+      link: "https://yandex.ru/maps/213/moscow/house/podolskoye_shosse_8/Z04YcAVkSkQOQFtvfXtwdXhlYQ==/?ll=37.624319%2C55.714465&z=17"
      },
      {
-      text: "По всем вопросам: 21-school@rudn.ru"
+      text: "По всем вопросам: 21-school@rudn.ru",
+       link: "mailto:21-school@rudn.ru"
      }
   ]
 }

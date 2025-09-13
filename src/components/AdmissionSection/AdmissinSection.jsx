@@ -5,12 +5,11 @@ import { admissionData } from "../../data/admission";
 
 import Title from "../SectionTitle/SectionTitle";
 
-
 const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.2, 
+      staggerChildren: 0.2,
     },
   },
 };
@@ -31,8 +30,8 @@ function Admission() {
       id="apply"
       className={admissionStyles.admission}
       initial="hidden"
-      whileInView="show" 
-      viewport={{ once: false, amount: 0.2 }} 
+      whileInView="show"
+      viewport={{ once: false, amount: 0.2 }}
     >
       <div className="block-wrap">
         <div className={admissionStyles.admissionContent}>
@@ -62,10 +61,22 @@ function Admission() {
                   >
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>
+
                     {item.extraText && (
                       <p className={admissionStyles.extraText}>
                         {item.extraText}
                       </p>
+                    )}
+
+                    {rowIndex === 0 && itemIndex === 0 && (
+                      <a
+                        href="https://applicant.21-school.ru/signup"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={admissionStyles.admissionButton}
+                      >
+                        Регистрация
+                      </a>
                     )}
                   </motion.li>
                 ))}
