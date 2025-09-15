@@ -206,10 +206,6 @@
     background-position: right calc(100% + 3.5rem);
   }
 
-  .hero::before {
-    background-size: clamp(300px, 39vh, 600px);
-    background-position: left calc(100% + 2rem);
-  }
 
   .heroContainerImg {
     width: clamp(30rem, 72vw, 35rem);
@@ -223,12 +219,12 @@
   }
 
   .hero::before {
-    background-size: clamp(250px, 32vh, 600px);
+    background-size: clamp(250px, 57vh, 600px);
     background-position: left calc(100% + 1.5rem);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .hero {
     padding-top: 3.163rem;
   }
