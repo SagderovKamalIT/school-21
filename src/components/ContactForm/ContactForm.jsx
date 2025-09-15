@@ -7,7 +7,7 @@ import { contactFormData } from "../../data/contactForm";
 function ContactForm() {
   const formRef = useRef(null);
   const [email, setEmail] = useState("");
-  const [agreementChecked, setAgreementChecked] = useState(false); 
+  const [agreementChecked, setAgreementChecked] = useState(false);
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -27,52 +27,71 @@ function ContactForm() {
         campus_id: 34,
         program_id: 1,
         ya_metrika_id: "49329160",
-        order_id: null,
-        click_id: null,
+        order_id: "",
+        click_id: "",
         utm: {
-          utm_source: null,
-          utm_medium: null,
-          utm_campaign: null,
-          utm_content: null
-        }
+          utm_source: "",
+          utm_medium: "",
+          utm_campaign: "",
+          utm_content: "",
+        },
       },
-      roistat_visit: "3292827"
+      roistat_visit: "3292827",
     };
 
     try {
       const response = await fetch("https://applicant.21-school.ru/api/v3/me", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
+      console.log("Payload for API:", JSON.stringify(payload));
 
-      if (response.status === 201) {
-        window.location.href = data.confirmation_link;
+      const data = await response.json();
+      console.log("API response data:", data);
+
+      if (response.status === 201 && data.user?.confirmation_link) {
+        
+        const link = data.user.confirmation_link.startsWith("http")
+          ? data.user.confirmation_link
+          : `https://applicant.21-school.ru${data.user.confirmation_link}`;
+
+        console.log("Redirecting to:", link);
+        window.location.replace(link);
       } else if (response.status === 200) {
+        
         alert("На эту почту уже регистрировались, проверьте почту.");
       } else if (response.status === 422) {
-        alert(`Ошибка: ${data.error}`);
+        
+        alert(`Ошибка: ${data.error || "Некорректные данные"}`);
+      } else {
+        console.error("Неожиданный статус ответа:", response.status, data);
+        alert("Произошла ошибка при отправке формы.");
       }
     } catch (err) {
       console.error(err);
-      alert("Произошла ошибка при отправке формы");
+      alert("Произошла ошибка при отправке формы.");
     }
   };
 
   return (
-    <section id="faq" className={ContactFormStyles.contactSection} ref={formRef}>
+    <section
+      id="faq"
+      className={ContactFormStyles.contactSection}
+      ref={formRef}
+    >
       <div className="block-wrap">
         <div className={ContactFormStyles.contactContainer}>
           <div className={ContactFormStyles.contactContent}>
-
             <Title className={ContactFormStyles.contactContainerTitle}>
               {contactFormData.title.map((item, index) => (
                 <span
                   key={index}
                   className={
-                    item.title === "школы 21" ? ContactFormStyles.highlightText : ContactFormStyles.headingText
+                    item.title === "школы 21"
+                      ? ContactFormStyles.highlightText
+                      : ContactFormStyles.headingText
                   }
                 >
                   {item.text || item.title}{" "}
@@ -80,8 +99,11 @@ function ContactForm() {
               ))}
             </Title>
 
-            <form className={ContactFormStyles.contactForm} onSubmit={handleSubmit}>
-              <input 
+            <form
+              className={ContactFormStyles.contactForm}
+              onSubmit={handleSubmit}
+            >
+              <input
                 className={ContactFormStyles.contactFormItem}
                 type="email"
                 placeholder="Ваша почта"
@@ -97,15 +119,14 @@ function ContactForm() {
             </form>
 
             <div className={ContactFormStyles.contactFormAgreement}>
-              <input 
-                type="checkbox" 
-                id="agreement" 
-                checked={agreementChecked} 
-                onChange={(e) => setAgreementChecked(e.target.checked)} 
+              <input
+                type="checkbox"
+                id="agreement"
+                checked={agreementChecked}
+                onChange={(e) => setAgreementChecked(e.target.checked)}
               />
               <label htmlFor="agreement">{contactFormData.paragraph}</label>
             </div>
-
           </div>
         </div>
       </div>

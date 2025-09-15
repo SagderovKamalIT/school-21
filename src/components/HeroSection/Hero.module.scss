@@ -160,7 +160,7 @@
   }
 
   .heroContainer {
-    gap: clamp(9rem, 14vh, 12.438rem);
+    gap: clamp(9rem, 35vh, 12.438rem);
   }
 
   .heroContainerImg {
@@ -170,12 +170,12 @@
   .hero::after {
     background-image: var(--hand-img-tablet);
     background-size: clamp(300px, 34vh, 498px);
-    background-position: right calc(100% + 5.5rem);
+    background-position: right calc(100% + 2.5rem);
   }
 
   .hero::before {
     background-size: clamp(450px, 45vh, 792px);
-    background-position: left calc(100% + 4rem);
+    background-position: left calc(100% + 2rem);
   }
 
   .heroText {
@@ -212,6 +212,7 @@
   }
 }
 
+
 @media (max-width: 690px) {
   .hero::after {
     background-size: clamp(280px, 20vh, 400px);
@@ -220,11 +221,27 @@
 
   .hero::before {
     background-size: clamp(250px, 57vh, 600px);
-    background-position: left calc(100% + 1.5rem);
+    background-position: left calc(100% + -1.5rem);
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 590px) {
+    .hero::after {
+    background-size: clamp(234px, 10vh, 400px);
+    background-position: right calc(100% + 2rem);
+  }
+
+  .hero::before {
+    background-size: clamp(250px, 46vh, 600px);
+    background-position: left calc(100% + -1.5rem);
+  }
+
+      .heroContainer {
+        gap: clamp(9rem, 22vh, 12.438rem);
+    }
+}
+
+@media (max-width: 480px) {
   .hero {
     padding-top: 3.163rem;
   }
@@ -241,16 +258,16 @@
     gap: 0;
   }
 
-  .hero::after {
+   .hero::after {
     background-image: var(--hand-img-mobile);
-    background-size: clamp(120px, 31vh, 238px);
+    background-size: clamp(120px, 34vh, 238px);
     background-position: right calc(100% + -4rem);
   }
 
   .hero::before {
     background-image: var(--robot-img-mobile);
-    background-size: clamp(220px, 25vh, 348px);
-    background-position: left calc(100% + -13.5rem);
+    background-size: clamp(220px, 28vh, 348px);
+    background-position: left calc(100% + -14.5rem);
   }
 
   .heroApply {
@@ -281,13 +298,13 @@
 @media (max-width: 400px) {
    .hero::after {
     background-image: var(--hand-img-mobile);
-    background-size: clamp(120px, 31vh, 238px);
-    background-position: right calc(100% + -3rem);
+    background-size: clamp(120px, 32vh, 238px);
+    background-position: right calc(100% + -3.5rem);
   }
 
   .hero::before {
     background-image: var(--robot-img-mobile);
-    background-size: clamp(220px, 25vh, 348px);
-    background-position: left calc(100% + -12.5rem);
+    background-size: clamp(220px, 30vh, 348px);
+    background-position: left calc(100% + -14.5rem);
   }
 }

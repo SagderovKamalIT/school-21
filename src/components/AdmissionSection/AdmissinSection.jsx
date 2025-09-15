@@ -55,7 +55,9 @@ function Admission() {
                     className={`
                       ${admissionStyles.admissionContainerCard} 
                       ${item.className ? admissionStyles[item.className] : ""} 
-                      ${admissionStyles[`card-${rowIndex + 1}-${itemIndex + 1}`]}
+                      ${
+                        admissionStyles[`card-${rowIndex + 1}-${itemIndex + 1}`]
+                      }
                     `}
                     variants={cardVariants}
                   >
@@ -69,14 +71,15 @@ function Admission() {
                     )}
 
                     {rowIndex === 0 && itemIndex === 0 && (
-                      <a
-                        href="https://applicant.21-school.ru/signup"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => {
+                          const formSection = document.getElementById("faq");
+                          formSection?.scrollIntoView({ behavior: "smooth" });
+                        }}
                         className={admissionStyles.admissionButton}
                       >
                         Регистрация
-                      </a>
+                      </button>
                     )}
                   </motion.li>
                 ))}
