@@ -39,8 +39,8 @@ function SelectionCriteria() {
               <React.Fragment key={idx}>
                 <div className={SelectionStyles.dayItem}>
                   <span className={SelectionStyles.label}>{day.label}</span>
-                  <span  className={SelectionStyles.value}>
-                    {day.value?.trim() === "появятся позже" ? (
+                  <span className={SelectionStyles.value}>
+                    {day.value?.trim() === "23 сентября, 25 сентября, \n29 сентября в 18:00" ? (
                       <Typewriter
                         words={[day.value.trim()]} 
                         loop={0}
@@ -48,7 +48,7 @@ function SelectionCriteria() {
                         cursorStyle="|"
                         typeSpeed={100}            
                         deleteSpeed={50}           
-                        delaySpeed={2000}          
+                        delaySpeed={3000}          
                       />
                     ) : (
                       day.value
