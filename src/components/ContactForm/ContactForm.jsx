@@ -29,6 +29,7 @@ function ContactForm() {
         ya_metrika_id: "49329160",
         order_id: "",
         click_id: "",
+        redirect_url: "https://21-school.rudn.ru/",
         utm: {
           utm_source: "",
           utm_medium: "",
@@ -52,18 +53,18 @@ function ContactForm() {
       console.log("API response data:", data);
 
       if (response.status === 201 && data.user?.confirmation_link) {
-        
         const link = data.user.confirmation_link.startsWith("http")
           ? data.user.confirmation_link
           : `https://applicant.21-school.ru${data.user.confirmation_link}`;
 
-        console.log("Redirecting to:", link);
-        window.location.replace(link);
+        const a = document.createElement("a");
+        a.href = link;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.click(); 
       } else if (response.status === 200) {
-        
         alert("На эту почту уже регистрировались, проверьте почту.");
       } else if (response.status === 422) {
-        
         alert(`Ошибка: ${data.error || "Некорректные данные"}`);
       } else {
         console.error("Неожиданный статус ответа:", response.status, data);
