@@ -130,7 +130,7 @@
 
   .aboutContent {
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     max-width: 1024px;
     margin: 0 auto;  
   }
@@ -139,17 +139,14 @@
   .aboutContentRight {
     flex: 1 1 100%;
     max-width: 100%;
+      margin: 0 auto;
   }
 
   .aboutContentRight {
     margin-top: 0;
   }
 
-  .aboutImageHall img,
-  .aboutImageCoworking {
-    
-    background-size: contain;
-  }
+
 
   .aboutContentInfo li {
     font-size: clamp(0.875rem, 1vw + 0.6rem, 1.25rem);
@@ -166,7 +163,7 @@
 
   .aboutContent {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     max-width: 100%;
   }
 

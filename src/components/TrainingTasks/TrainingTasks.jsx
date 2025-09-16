@@ -1,15 +1,12 @@
 import React from "react";
 import TrainingStyles from "./TrainingTasks.module.scss";
+import { Typewriter } from "react-simple-typewriter";
 
 import Heading from "../Heading/Heading";
 import TrainingTasksCard from "../TrainingTasksCard/TrainingTasksCard";
 
+
 import { trainingTasksData } from "../../data/trainingTasks";
-
-
-
-
-
 
 
 function TrainingTasks() {
@@ -17,9 +14,17 @@ function TrainingTasks() {
     <section id="tracks" className={TrainingStyles.trainingTasks}>
       <div className={`block-wrap ${TrainingStyles.trainingBlock}`} >
 
-        <Heading className={TrainingStyles.trainingTasksHeader}>
-          /* Треки обучения */
-        </Heading>
+       <Heading className={TrainingStyles.trainingTasksHeader}>
+      <Typewriter
+        words={["/* Треки обучения */"]} 
+        loop={0} 
+        cursor 
+        cursorStyle="|" 
+        typeSpeed={100} 
+        deleteSpeed={50}
+        delaySpeed={2000} 
+      />
+    </Heading>
 
         <div className={TrainingStyles.cards} >
 

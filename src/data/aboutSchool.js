@@ -1,5 +1,4 @@
 export const aboutSchoolData = {
-  title: "/* О Школе */",
 
   list: [
     {

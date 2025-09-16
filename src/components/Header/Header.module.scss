@@ -229,7 +229,7 @@
   }
 
   .nav {
-    padding: clamp(4px, 0.5vw, 6px) clamp(10px, 1.5vw, 14px);
+    padding: clamp(4px, 0.5vw, 6px) clamp(6px, 1vw, 14px);
     border-radius: clamp(1rem, 1.5vw, 1.8rem);
   }
 
@@ -331,7 +331,7 @@
   }
 
   .headerLink {
-    gap: clamp(0.3rem, 1.5vw, 0.6rem);
+    gap: clamp(0.3rem, 2.5vw, 0.6rem);
   }
 
   .headerLinkSber img {

@@ -14,6 +14,8 @@ function SelectionCriteria() {
 
           <Heading className={SelectionStyles.selectionHeader}>
             {selectionData.title}
+
+
           </Heading>
 
           <ol className={SelectionStyles.selectionList}>

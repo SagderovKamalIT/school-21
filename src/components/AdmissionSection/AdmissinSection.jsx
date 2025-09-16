@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import admissionStyles from "./AdmissionSection.module.scss";
 import { admissionData } from "../../data/admission";
+import { Typewriter } from "react-simple-typewriter";
 
 import Title from "../SectionTitle/SectionTitle";
 
@@ -35,7 +36,17 @@ function Admission() {
     >
       <div className="block-wrap">
         <div className={admissionStyles.admissionContent}>
-          <Title>// Как поступить:</Title>
+          <Title>
+            <Typewriter
+              words={["// Как поступить:"]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={100}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
+          </Title>
 
           <motion.div
             className={admissionStyles.admissionContainer}

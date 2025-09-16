@@ -2,6 +2,7 @@ import React from "react";
 import AboutSchoolStyles from "./AboutSchool.module.scss";
 import Heading from "../Heading/Heading";
 import { aboutSchoolData } from "../../data/aboutSchool";
+import { Typewriter } from "react-simple-typewriter";
 
 import Cluster from "../../assets/images/aboutSchool/cluster.png";
 import Coworking from "../../assets/images/aboutSchool/coworking.png";
@@ -13,11 +14,21 @@ function AboutSchool() {
       <div className="block-wrap">
         <div className={AboutSchoolStyles.aboutContainer}>
           <Heading className={AboutSchoolStyles.aboutContainerHeader}>
-            {aboutSchoolData.title}
+            <span>
+              {aboutSchoolData.title}{" "}
+              <Typewriter
+                words={["/* О ШКОЛE */"]}
+                loop={0}
+                cursor
+                cursorStyle="|"
+                typeSpeed={100}
+                deleteSpeed={50}
+                delaySpeed={2000}
+              />
+            </span>
           </Heading>
 
           <div className={AboutSchoolStyles.aboutContent}>
-            {/* Левая часть */}
             <div className={AboutSchoolStyles.aboutContentLeft}>
               <div className={AboutSchoolStyles.aboutContentInfo}>
                 <div className={AboutSchoolStyles.aboutContentList}>
@@ -46,7 +57,6 @@ function AboutSchool() {
                   </ul>
                 </div>
 
-                {/* Блок с адресом */}
                 <div className={AboutSchoolStyles.aboutContentAddress}>
                   {aboutSchoolData.address.map((item, index) =>
                     item.link ? (
@@ -71,7 +81,6 @@ function AboutSchool() {
               </div>
             </div>
 
-            {/* Правая часть */}
             <div className={AboutSchoolStyles.aboutContentRight}>
               <div className={AboutSchoolStyles.aboutImageCoworking}></div>
 
