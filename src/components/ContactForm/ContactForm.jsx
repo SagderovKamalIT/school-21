@@ -21,6 +21,12 @@ function ContactForm() {
       return;
     }
 
+    const savedEmail = localStorage.getItem("registeredEmail");
+    if (savedEmail && savedEmail === email) {
+      alert("На эту почту уже регистрировались, проверьте почту.");
+      return;
+    }
+
     const payload = {
       user: {
         email: email,
@@ -48,11 +54,12 @@ function ContactForm() {
       });
 
       console.log("Payload for API:", JSON.stringify(payload));
-
       const data = await response.json();
       console.log("API response data:", data);
 
       if (response.status === 201 && data.user?.confirmation_link) {
+        localStorage.setItem("registeredEmail", email);
+
         const link = data.user.confirmation_link.startsWith("http")
           ? data.user.confirmation_link
           : `https://applicant.21-school.ru${data.user.confirmation_link}`;
@@ -61,11 +68,21 @@ function ContactForm() {
         a.href = link;
         a.target = "_blank";
         a.rel = "noopener noreferrer";
-        a.click(); 
+        a.click();
       } else if (response.status === 200) {
         alert("На эту почту уже регистрировались, проверьте почту.");
+        localStorage.setItem("registeredEmail", email);
       } else if (response.status === 422) {
-        alert(`Ошибка: ${data.error || "Некорректные данные"}`);
+        const errorMessage = data.error || "";
+        if (
+          errorMessage.toLowerCase().includes("email") &&
+          errorMessage.toLowerCase().includes("already")
+        ) {
+          alert("На эту почту уже регистрировались, проверьте почту.");
+          localStorage.setItem("registeredEmail", email);
+        } else {
+          alert(`Ошибка: ${errorMessage || "Некорректные данные"}`);
+        }
       } else {
         console.error("Неожиданный статус ответа:", response.status, data);
         alert("Произошла ошибка при отправке формы.");
@@ -107,7 +124,7 @@ function ContactForm() {
               <input
                 className={ContactFormStyles.contactFormItem}
                 type="email"
-                placeholder="Ваша почта"
+                placeholder="Корпоративная почта"
                 name="email"
                 required
                 value={email}
