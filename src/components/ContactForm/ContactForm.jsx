@@ -13,6 +13,10 @@ function ContactForm() {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const isValidCorporateEmail = (email) => {
+    return email.endsWith("@rudn.ru") || email.endsWith("@pfur.ru");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -24,7 +28,7 @@ function ContactForm() {
     const savedEmail = localStorage.getItem("registeredEmail");
     if (savedEmail && savedEmail === email) {
       alert("На эту почту уже регистрировались, проверьте почту.");
-      return;
+      
     }
 
     const payload = {
@@ -124,15 +128,20 @@ function ContactForm() {
               <input
                 className={ContactFormStyles.contactFormItem}
                 type="email"
-                placeholder="Корпоративная почта"
+                placeholder="name@rudn.ru"
                 name="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <Button
-                className={ContactFormStyles.contactFormButton}
+                className={`${ContactFormStyles.contactFormButton} ${
+                  !isValidCorporateEmail(email)
+                    ? ContactFormStyles.disabledButton
+                    : ""
+                }`}
                 text={contactFormData.buttonText}
+                disabled={!isValidCorporateEmail(email)}
               />
             </form>
 

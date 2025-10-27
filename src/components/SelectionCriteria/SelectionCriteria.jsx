@@ -40,7 +40,7 @@ function SelectionCriteria() {
                 <div className={SelectionStyles.dayItem}>
                   <span className={SelectionStyles.label}>{day.label}</span>
                   <span className={SelectionStyles.value}>
-                    {day.value?.trim() === "23 сентября, 25 сентября, \n29 сентября в 18:00" ? (
+                    {day.value?.trim() === "23 сентября, 25 сентября, \n29 сентября" ? (
                       <Typewriter
                         words={[day.value.trim()]} 
                         loop={0}

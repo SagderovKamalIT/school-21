@@ -59,11 +59,17 @@
   font-weight: 700;
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background-color: darken($yellowship-green, 10%); 
     color: white; 
 
+  }
+
+ &.disabledButton {
+    cursor: not-allowed;
+    opacity: 0.5;          
+    pointer-events: none;   
   }
 }
 

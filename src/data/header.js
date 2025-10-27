@@ -12,7 +12,7 @@ export const headerItems = [
   },
   {
     title: "FAQ",
-    link: "#faq",
+    link: "https://t.me/c/3023785453/20",
   },
   {
     title: "Регистрация",
