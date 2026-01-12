@@ -6,13 +6,19 @@ export const headerItems = [
     title: "Кампус",
     link: "#campus",
   },
+
+    {
+    title: "Основное обучение",
+    link: "#training",
+  },
   {
     title: "Контакты",
     link: "#contacts",
   },
   {
     title: "FAQ",
-    link: "https://t.me/c/3023785453/20",
+    link: "https://t.me/campus21_rudn",
+    external: true, 
   },
   {
     title: "Регистрация",

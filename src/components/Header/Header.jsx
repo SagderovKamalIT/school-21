@@ -12,7 +12,7 @@ import HeaderBurger from "../HeaderBurger/HeaderBurger";
 function Header() {
   return (
     <header className={styles.header}>
-      <div className="wrap">
+      <div className="header-wrap">
         <div className={styles.headerContainer}>
           <div className={styles.headerLink}>
             <a
@@ -72,7 +72,10 @@ function Header() {
                       </motion.button>
                     ) : (
                       <motion.a
+                        data-title={item.title}
                         href={item.link}
+                        target={item.external ? "_blank" : "_self"}
+                        rel={item.external ? "noopener noreferrer" : undefined}
                         whileHover={{ scale: 1.05, color: "#A0E720" }}
                         whileTap={{ scale: 0.95 }}
                         transition={{ duration: 0.1 }}

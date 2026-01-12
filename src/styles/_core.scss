@@ -27,6 +27,16 @@ html {
   box-sizing: border-box;
 }
 
+.header-wrap {
+      min-width: 320px;
+    max-width: 1920px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 4.708vw;
+    box-sizing: border-box;
+}
+
 .block-wrap {
   @include min-max(320px, 1920px);
   width: 100%;
@@ -82,6 +92,10 @@ button {
     font-size: 90%;
   }
 
+  .header-wrap {
+    padding: 0 3rem;
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -89,7 +103,8 @@ button {
     font-size: 100%;
   }
 
-  .wrap {
+  .wrap,
+  .header-wrap {
   padding: 0 5.270vw;
 }
 
@@ -100,7 +115,8 @@ button {
 }
 
 @media (max-width: 884px) {
-  .wrap {
+  .wrap,
+   .header-wrap {
       padding: 0 4vw;
   }
 }
@@ -116,7 +132,8 @@ button {
     font-size: 100%;
   }
 
-  .wrap {
+  .wrap,
+   .header-wrap {
     padding: 0 2rem;
   }
 

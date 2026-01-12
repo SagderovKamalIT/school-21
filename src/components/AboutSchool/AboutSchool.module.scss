@@ -69,6 +69,7 @@
 .aboutContentList3 {
   display: flex;
   justify-content: space-between;
+  gap: clamp(0.5rem, 0.8vw, 1.25rem);
   flex-wrap: wrap;
 }
 
@@ -99,8 +100,12 @@
   object-fit: cover;
 }
 
+.aboutContentImageCluster {
+  aspect-ratio: 16 / 10;
+}
+
 .aboutImageCoworking {
-  background-image: url("../../assets/images/aboutSchool/coworking.png");
+  background-image: url("../../assets/images/aboutSchool/coworking.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -111,7 +116,7 @@
 
 .aboutImageHall img {
   width: 100%;
-  aspect-ratio: 16 / 6;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: 0.938rem;
 }

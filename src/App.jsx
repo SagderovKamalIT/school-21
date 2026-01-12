@@ -10,6 +10,7 @@ import AboutSchool from "./components/AboutSchool/AboutSchool"
 import ContactForm from "./components/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
 import Admission from "./components/AdmissionSection/AdmissinSection";
+import TrainingInfo from "./components/BasicTraining/BasicTraining";
 
 import YandexMetrica from "./components/YandexMetrica/YandexMetrica";
 
@@ -33,6 +34,7 @@ function App() {
       <Employers />
       <Admission />
       <SelectionCriteria />
+      <TrainingInfo />
       <AboutSchool />
       <ContactForm />
       

@@ -1,0 +1,217 @@
+@use "../../styles/variables" as *;
+@use "../../styles/core" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles//fonts" as *;
+
+.training {
+  padding-bottom: 8.125rem;
+}
+
+.mobile-br {
+  display: none;
+}
+
+.training__inner {
+  background-color: $dark-jungle-green;
+  border-radius: 20px;
+  padding: 4.375rem 4.375rem;
+}
+
+.training__title {
+  color: $white;
+}
+
+.training__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.375rem;
+}
+
+.training__headline-pill {
+  font-family: Minecraft-1-1-c;
+  padding: 0.938rem 1.188rem;
+  border-radius: 0.625rem;
+  background-color: $yellowship-green;
+  color: $dark-jungle-green;
+  font-weight: 400;
+  font-size: 2.2rem;
+  width: fit-content;
+}
+
+.training__important {
+  display: flex;
+  flex-direction: row;
+  gap: 1.188rem;
+  align-items: center;
+
+  &-badge {
+    padding: 0.594rem 1.188rem;
+    font-family: Minecraft-1-1-c;
+    background-color: $yellowship-green;
+    color: $dark-jungle-green;
+    font-weight: 400;
+    font-size: 2rem;
+    width: fit-content;
+    border-radius: 0.625rem;
+  }
+
+  &-text {
+    color: $white;
+    font-family: Roboto-c;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+}
+
+.training__text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: last baseline;
+}
+
+.training__text {
+  color: $white;
+  font-family: Roboto-c;
+  font-weight: 500;
+ font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+  line-height: 1.25;
+
+  &-span {
+    padding: 0.438rem 1.375rem;
+    background-color: $white;
+    color: $dark-jungle-green;
+    font-family: Roboto-c;
+    font-weight: 500;
+    font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+    border-radius: 4.375rem;
+  }
+
+  &-link {
+    text-decoration: underline;
+    color: $dark-jungle-green;
+  }
+}
+
+
+@media (max-width: 1350px) {
+
+  .training__headline-pill {
+  font-size: 1.8rem;
+}
+
+.training__important-badge {
+
+   font-size: 1.8rem;
+
+}
+
+.training__important-text {
+  font-size: 1.3rem;
+}
+
+.training__text {
+  font-size: clamp(0.95rem, 1vw, 1.5rem);
+
+  &-span {
+    font-size: clamp(0.95rem, 1vw, 1.5rem);
+  }
+}
+
+}
+
+@media (max-width: 1024px) {
+
+  .training {
+  padding-bottom: 4rem;
+
+  &__inner {
+  padding: 1.875rem;
+  }
+
+  &__container {
+    gap: 1.875rem;
+  }
+}
+
+  .training__headline-pill {
+    font-size: clamp(1.3rem, 1vw ,1.6rem);
+  }
+
+  .training__important-badge {
+     font-size: clamp(1.3rem, 1vw ,1.6rem);
+  }
+
+  .training__important-text {
+    font-size: clamp(1rem, 1vw,1.2rem);
+  }
+
+  .training__text-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .training__text {
+     font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+     
+
+    &-span {
+      font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+      align-self: flex-end;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+   .training__headline-pill {
+    font-size: clamp(1.25rem, 1vw ,1.6rem);
+    line-height: 1.2;
+    width: 100%;
+    text-align: center;
+  }
+
+    .mobile-br {
+    display: inline;
+    
+  }
+}
+
+@media (max-width: 490px) {
+
+  .training {
+    padding-bottom: 3.75rem;
+
+    &__container {
+      gap: 1.438rem;
+    }
+
+    &__inner {
+              gap: 1.438rem;
+        padding: 1.563rem;
+        border-radius: 0.625rem;
+        text-align: center;
+    }
+  }
+
+  .training__important {
+    flex-direction: column;
+  }
+
+  .training__headline-pill,
+  .training__important-badge,
+  .training__text-span {
+    border-radius: 0.3rem;
+  }
+
+  .training__headline-pill,
+  .training__important-badge {
+            font-size: clamp(1.15rem, 1vw, 1.3rem);
+  }
+
+  .training__important-text, 
+  .training__text{
+        font-size: clamp(0.8rem, 1vw, 0.8rem);
+    }
+
+}

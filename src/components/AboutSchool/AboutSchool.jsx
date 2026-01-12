@@ -4,9 +4,9 @@ import Heading from "../Heading/Heading";
 import { aboutSchoolData } from "../../data/aboutSchool";
 import { Typewriter } from "react-simple-typewriter";
 
-import Cluster from "../../assets/images/aboutSchool/cluster.png";
-import Coworking from "../../assets/images/aboutSchool/coworking.png";
-import LectureHall from "../../assets/images/aboutSchool/lecture-hall.png";
+import Cluster from "../../assets/images/aboutSchool/cluster1.jpg";
+import Coworking from "../../assets/images/aboutSchool/coworking.jpg";
+import LectureHall from "../../assets/images/aboutSchool/lecture-hall.jpg";
 
 function AboutSchool() {
   return (
@@ -77,7 +77,7 @@ function AboutSchool() {
               </div>
 
               <div className={AboutSchoolStyles.aboutContentImage}>
-                <img src={Cluster} alt="Cluster" />
+                <img className={AboutSchoolStyles.aboutContentImageCluster} src={Cluster} alt="Cluster" />
               </div>
             </div>
 

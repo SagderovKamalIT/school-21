@@ -5,27 +5,26 @@ import { selectionData } from "../../data/selectionCriteria";
 import dividerLine from "../../assets/icons/selectionBlockLine.svg";
 import { Typewriter } from "react-simple-typewriter";
 
-
 function SelectionCriteria() {
   return (
     <section className={SelectionStyles.selectionSection}>
       <div className="block-wrap">
         <div className={SelectionStyles.selectionContent}>
-
           <Heading className={SelectionStyles.selectionHeader}>
             {selectionData.title}
-
-
           </Heading>
 
+          {/* ===== КРИТЕРИИ ===== */}
           <ol className={SelectionStyles.selectionList}>
             {selectionData.list.map((item, idx) => (
               <li key={idx} className={SelectionStyles.selectionlistItem}>
                 {item.parts.map((part, i) => (
                   <span
-                    style={{ whiteSpace: "pre-line" }}
                     key={i}
-                    className={part.style === "bold" ? SelectionStyles.boldText : ""}
+                    className={`
+                      ${part.style === "bold" ? SelectionStyles.boldText : ""}
+                      ${part.className ? SelectionStyles[part.className] : ""}
+                    `}
                   >
                     {part.text}
                   </span>
@@ -37,24 +36,42 @@ function SelectionCriteria() {
           <div className={SelectionStyles.selectionDayItems}>
             {selectionData.days.map((day, idx) => (
               <React.Fragment key={idx}>
-                <div className={SelectionStyles.dayItem}>
-                  <span className={SelectionStyles.label}>{day.label}</span>
-                  <span className={SelectionStyles.value}>
-                    {day.value?.trim() === "23 сентября, 25 сентября, \n29 сентября" ? (
-                      <Typewriter
-                        words={[day.value.trim()]} 
-                        loop={0}
-                        cursor
-                        cursorStyle="|"
-                        typeSpeed={100}            
-                        deleteSpeed={50}           
-                        delaySpeed={3000}          
-                      />
-                    ) : (
-                      day.value
-                    )}
-                  </span>
-                </div>
+                {day.label && day.value && (
+                  <div className={SelectionStyles.dayItem}>
+                    <span className={SelectionStyles.label}>{day.label}</span>
+
+                    <span className={SelectionStyles.value}>
+                     
+                      {day.url ? (
+                        <a
+                          href={
+                            day.url.startsWith("http")
+                              ? day.url
+                              : `https://${day.url}`
+                          }
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={SelectionStyles.link}
+                        >
+                          {day.value}
+                        </a>
+                      ) : day.value.trim() ===
+                        "26-29 января, 11-14 февраля, \n18-21 февраля" ? (
+                        <Typewriter
+                          words={[day.value.trim()]}
+                          loop={0}
+                          cursor
+                          cursorStyle="|"
+                          typeSpeed={100}
+                          deleteSpeed={50}
+                          delaySpeed={3000}
+                        />
+                      ) : (
+                        day.value
+                      )}
+                    </span>
+                  </div>
+                )}
 
                 {idx === 1 && (
                   <img
@@ -66,7 +83,6 @@ function SelectionCriteria() {
               </React.Fragment>
             ))}
           </div>
-
         </div>
       </div>
     </section>
